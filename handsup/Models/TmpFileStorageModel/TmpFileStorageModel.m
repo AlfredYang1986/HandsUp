@@ -106,8 +106,10 @@
     
 }
 
-+ (NSURL*)enumFileWithName:(NSString*)name andType:(PostPreViewType)type withDownLoadFinishBlock:(fileDidDownloadBlock)block {
++ (NSURL*)enumFileWithName:(NSString*)name andType:(NSInteger)type withDownLoadFinishBlock:(fileDidDownloadBlock)block {
+    
     NSString* path = nil;
+#define PostPreViewPhote 0
     if (type == PostPreViewPhote) {
         path = [TmpFileStorageModel BMTmpImageDir];
     } else {
@@ -121,6 +123,7 @@
         /**
          * down load from server
          */
+#define ATT_DOWNLOAD_HOST @""
         dispatch_queue_t aq = dispatch_queue_create("download queue", nil);
         dispatch_async(aq, ^{
             NSData* data = [RemoteInstance remoteDownloadFileWithName:name andHost:ATT_DOWNLOAD_HOST];

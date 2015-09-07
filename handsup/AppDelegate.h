@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class ViewController;
+@class HandsUpController;
+@class CatchUpController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic, strong) ViewController* mainController;
+@property (nonatomic, strong) HandsUpController* handsUpController;
+@property (nonatomic, strong) CatchUpController* catchUpController;
 /**
  * for notification
  */

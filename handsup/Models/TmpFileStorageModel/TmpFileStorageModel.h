@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "PostDefine.h"
 
 typedef void(^imageDidDownloadBlock)(BOOL success, UIImage* img);
 typedef void(^fileDidDownloadBlock)(BOOL success, NSURL* img);
@@ -23,7 +22,7 @@ typedef void(^fileDidDownloadBlock)(BOOL success, NSURL* img);
 + (void)saveToTmpDirWithImage:(UIImage*)img withName:(NSString*)name;
 + (void)saveAsToAlbumWithImageName:(NSString*)name;
 // for item
-+ (NSURL*)enumFileWithName:(NSString*)name andType:(PostPreViewType)type withDownLoadFinishBlock:(fileDidDownloadBlock)block;
++ (NSURL*)enumFileWithName:(NSString*)name andType:(NSInteger)type withDownLoadFinishBlock:(fileDidDownloadBlock)block;
 + (UIImage*)enumImageWithName:(NSString*)name withDownLoadFinishBolck:(imageDidDownloadBlock)block;
 
 #pragma mark -- item movie dir

@@ -8,11 +8,18 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import "ViewController.h"
+#import "HandsUpController.h"
+#import "CatchUpController.h"
 
+@interface AppDelegate ()
 @end
 
 @implementation AppDelegate
+
+@synthesize mainController = _mainController;
+@synthesize handsUpController = _handsUpController;
+@synthesize catchUpController = _catchUpController;
 
 @synthesize apns_token = _apns_token;
 
