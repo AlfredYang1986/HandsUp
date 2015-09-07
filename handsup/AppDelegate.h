@@ -11,12 +11,14 @@
 @class ViewController;
 @class HandsUpController;
 @class CatchUpController;
+@class InfoStationController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) ViewController* mainController;
 @property (nonatomic, strong) HandsUpController* handsUpController;
 @property (nonatomic, strong) CatchUpController* catchUpController;
+@property (nonatomic, strong) InfoStationController* infoStationController;
 /**
  * for notification
  */

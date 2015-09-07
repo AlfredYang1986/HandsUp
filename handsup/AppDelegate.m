@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "InfoStationController.h"
 #import "HandsUpController.h"
 #import "CatchUpController.h"
 
@@ -20,6 +21,7 @@
 @synthesize mainController = _mainController;
 @synthesize handsUpController = _handsUpController;
 @synthesize catchUpController = _catchUpController;
+@synthesize infoStationController = _infoStationController;
 
 @synthesize apns_token = _apns_token;
 

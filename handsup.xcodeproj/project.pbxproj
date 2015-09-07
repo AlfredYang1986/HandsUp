@@ -40,6 +40,8 @@
 		EEAD45A71B9D4EC3000E5EE0 /* HandsUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45A61B9D4EC3000E5EE0 /* HandsUpController.m */; };
 		EEAD45AA1B9D4F11000E5EE0 /* CatchUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45A91B9D4F11000E5EE0 /* CatchUpController.m */; };
 		EEAD45AD1B9D5F6B000E5EE0 /* CatchUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */; };
+		EEAD45B01B9D6599000E5EE0 /* InfoStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */; };
+		EEAD45B31B9D72B1000E5EE0 /* InfoSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,10 @@
 		EEAD45A91B9D4F11000E5EE0 /* CatchUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpController.m; sourceTree = "<group>"; };
 		EEAD45AB1B9D5F6B000E5EE0 /* CatchUpSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchUpSegue.h; sourceTree = "<group>"; };
 		EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpSegue.m; sourceTree = "<group>"; };
+		EEAD45AE1B9D6599000E5EE0 /* InfoStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoStationController.h; sourceTree = "<group>"; };
+		EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoStationController.m; sourceTree = "<group>"; };
+		EEAD45B11B9D72B1000E5EE0 /* InfoSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoSegue.h; sourceTree = "<group>"; };
+		EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +293,8 @@
 				EEAD45A61B9D4EC3000E5EE0 /* HandsUpController.m */,
 				EEAD45A81B9D4F11000E5EE0 /* CatchUpController.h */,
 				EEAD45A91B9D4F11000E5EE0 /* CatchUpController.m */,
+				EEAD45AE1B9D6599000E5EE0 /* InfoStationController.h */,
+				EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -339,6 +347,8 @@
 				EEAD45A31B9D4B9F000E5EE0 /* HandsUpSegue.m */,
 				EEAD45AB1B9D5F6B000E5EE0 /* CatchUpSegue.h */,
 				EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */,
+				EEAD45B11B9D72B1000E5EE0 /* InfoSegue.h */,
+				EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -459,6 +469,7 @@
 				EEAD45731B9D47F0000E5EE0 /* TmpFileStorageModel.m in Sources */,
 				EE9F5B8C1B9D38F600504355 /* AppDelegate.m in Sources */,
 				EEAD459E1B9D4807000E5EE0 /* SGBaseMenu.m in Sources */,
+				EEAD45B01B9D6599000E5EE0 /* InfoStationController.m in Sources */,
 				EEAD45641B9D47E5000E5EE0 /* INTUSpringSolver.c in Sources */,
 				EEAD459D1B9D4807000E5EE0 /* SGAlertMenu.m in Sources */,
 				EEAD459C1B9D4807000E5EE0 /* SGActionView.m in Sources */,
@@ -469,6 +480,7 @@
 				EEAD459F1B9D4807000E5EE0 /* SGGridMenu.m in Sources */,
 				EEAD45621B9D47E5000E5EE0 /* INTUEasingFunctions.m in Sources */,
 				EEAD45951B9D4807000E5EE0 /* BWStatusBarOverlay.m in Sources */,
+				EEAD45B31B9D72B1000E5EE0 /* InfoSegue.m in Sources */,
 				EEAD45A41B9D4B9F000E5EE0 /* HandsUpSegue.m in Sources */,
 				EEAD45721B9D47F0000E5EE0 /* Reachability.m in Sources */,
 				EEAD45AD1B9D5F6B000E5EE0 /* CatchUpSegue.m in Sources */,

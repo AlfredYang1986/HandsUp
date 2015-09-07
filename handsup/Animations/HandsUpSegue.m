@@ -7,41 +7,49 @@
 //
 
 #import "HandsUpSegue.h"
+#import "INTUAnimationEngine.h"
 
-@implementation HandsUpSegue
+@implementation HandsUpSegue {
+    UIView* animationView;
+}
 
 -(void)perform {
-//    UIViewController * svc = self.sourceViewController;
-//    UIViewController * dvc = self.destinationViewController;
-//    [svc.view addSubview:dvc.view];
-//    [dvc.view setFrame:svc.view.frame];
-//    [dvc.view setTransform:CGAffineTransformMakeScale(0.1, 0.1)];
-//    [dvc.view setAlpha:0.0];
-////    [UIView animateWithDuration:1.0
-////                     animations:^{
-////                         [dvc.view setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
-////                         [dvc.view setAlpha:1.0];
-////                     }
-////                     completion:^(BOOL finished) {
-////                         //                         [dvc.view removeFromSuperview];
-////                     }];
-//    
-//    [UIView transitionWithView:svc.navigationController.view duration:0.6
-//                       options:UIViewAnimationOptionTransitionFlipFromRight
-//                    animations:^{
-//                            [svc.navigationController pushViewController:dvc animated:NO];
-//                        }
-//                    completion:NULL];
     
     UIViewController *src = (UIViewController *) self.sourceViewController;
     UIViewController *dst = (UIViewController *) self.destinationViewController;
+
+    UIView* src_view = src.view;
+    UIView* dst_view = dst.view;
+ 
+    static const CGFloat kAnimationDuration = 1.f; // in seconds
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+
+    CGRect rc_1 = CGRectMake(0, 0, width, height * 2);
+    CGRect rc_2 = CGRectMake(0, -height, width, height * 2);
+    CGRect rc_3 = CGRectMake(0, height, width, height);
     
-    [UIView transitionFromView:src.view toView:dst.view duration:1 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
-        [src.navigationController pushViewController:dst animated:NO];
-    }];
+    src_view.frame = rc_1;
+    dst_view.frame = rc_3;
     
-//    [UIView transitionFromView:src.navigationItem.titleView toView:dst.navigationItem.titleView duration:1 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
-//        [src.navigationController pushViewController:dst animated:NO];
-//    } ];
+    [src_view addSubview:dst_view];
+   
+    [INTUAnimationEngine animateWithDuration:kAnimationDuration
+                                                          delay:0.0
+                                                         easing:INTUEaseInOutQuadratic
+                                                        options:INTUAnimationOptionNone
+                                                     animations:^(CGFloat progress) {
+//                                                         dst_view.frame = INTUInterpolateCGRect(rc_3, rc_1, progress);
+                                                         src_view.frame = INTUInterpolateCGRect(rc_1, rc_2, progress);
+                                                         
+                                                         // NSLog(@"Progress: %.2f", progress);
+                                                     }
+                                                     completion:^(BOOL finished) {
+                                                         NSLog(@"%@", finished ? @"Animation Completed" : @"Animation Canceled");
+                                                         [src.navigationController pushViewController:dst animated:NO];
+//                                                         src.view = src_view;
+//                                                         animationView = nil;
+//                                                         [dst.view removeFromSuperview];
+                                                     }];
 }
 @end
