@@ -16,6 +16,26 @@
 		EE9F5BA61B9D38F600504355 /* handsupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F5BA51B9D38F600504355 /* handsupTests.m */; };
 		EE9F5BB91B9D3D7500504355 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE9F5BB71B9D3D7200504355 /* Localizable.strings */; };
 		EE9F5BBD1B9D3D9000504355 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE9F5BBF1B9D3D9000504355 /* InfoPlist.strings */; };
+		EEAD44DA1B9D45E8000E5EE0 /* HandsUpApp.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = EEAD44D91B9D45E8000E5EE0 /* HandsUpApp.mobileprovision */; };
+		EEAD45611B9D47E5000E5EE0 /* INTUAnimationEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45581B9D47E5000E5EE0 /* INTUAnimationEngine.m */; };
+		EEAD45621B9D47E5000E5EE0 /* INTUEasingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD455A1B9D47E5000E5EE0 /* INTUEasingFunctions.m */; };
+		EEAD45631B9D47E5000E5EE0 /* INTUInterpolationFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD455C1B9D47E5000E5EE0 /* INTUInterpolationFunctions.m */; };
+		EEAD45641B9D47E5000E5EE0 /* INTUSpringSolver.c in Sources */ = {isa = PBXBuildFile; fileRef = EEAD455E1B9D47E5000E5EE0 /* INTUSpringSolver.c */; };
+		EEAD45681B9D47EA000E5EE0 /* RemoteInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45671B9D47EA000E5EE0 /* RemoteInstance.m */; };
+		EEAD45721B9D47F0000E5EE0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD456E1B9D47F0000E5EE0 /* Reachability.m */; };
+		EEAD45731B9D47F0000E5EE0 /* TmpFileStorageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45711B9D47F0000E5EE0 /* TmpFileStorageModel.m */; };
+		EEAD45951B9D4807000E5EE0 /* BWStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45831B9D4807000E5EE0 /* BWStatusBarOverlay.m */; };
+		EEAD45961B9D4807000E5EE0 /* status-bar-pattern-black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EEAD45841B9D4807000E5EE0 /* status-bar-pattern-black.jpg */; };
+		EEAD45971B9D4807000E5EE0 /* status-bar-pattern-black@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EEAD45851B9D4807000E5EE0 /* status-bar-pattern-black@2x.jpg */; };
+		EEAD45981B9D4807000E5EE0 /* status-bar-pattern-default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EEAD45861B9D4807000E5EE0 /* status-bar-pattern-default.jpg */; };
+		EEAD45991B9D4807000E5EE0 /* status-bar-pattern-default@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EEAD45871B9D4807000E5EE0 /* status-bar-pattern-default@2x.jpg */; };
+		EEAD459A1B9D4807000E5EE0 /* status-bar-progress.png in Resources */ = {isa = PBXBuildFile; fileRef = EEAD45881B9D4807000E5EE0 /* status-bar-progress.png */; };
+		EEAD459B1B9D4807000E5EE0 /* status-bar-progress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEAD45891B9D4807000E5EE0 /* status-bar-progress@2x.png */; };
+		EEAD459C1B9D4807000E5EE0 /* SGActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD458C1B9D4807000E5EE0 /* SGActionView.m */; };
+		EEAD459D1B9D4807000E5EE0 /* SGAlertMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD458E1B9D4807000E5EE0 /* SGAlertMenu.m */; };
+		EEAD459E1B9D4807000E5EE0 /* SGBaseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45901B9D4807000E5EE0 /* SGBaseMenu.m */; };
+		EEAD459F1B9D4807000E5EE0 /* SGGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45921B9D4807000E5EE0 /* SGGridMenu.m */; };
+		EEAD45A01B9D4807000E5EE0 /* SGSheetMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45941B9D4807000E5EE0 /* SGSheetMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +68,41 @@
 		EE9F5BBA1B9D3D7500504355 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EE9F5BBE1B9D3D9000504355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EE9F5BC01B9D3D9100504355 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EEAD44D91B9D45E8000E5EE0 /* HandsUpApp.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = HandsUpApp.mobileprovision; sourceTree = "<group>"; };
+		EEAD45571B9D47E5000E5EE0 /* INTUAnimationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTUAnimationEngine.h; sourceTree = "<group>"; };
+		EEAD45581B9D47E5000E5EE0 /* INTUAnimationEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTUAnimationEngine.m; sourceTree = "<group>"; };
+		EEAD45591B9D47E5000E5EE0 /* INTUEasingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTUEasingFunctions.h; sourceTree = "<group>"; };
+		EEAD455A1B9D47E5000E5EE0 /* INTUEasingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTUEasingFunctions.m; sourceTree = "<group>"; };
+		EEAD455B1B9D47E5000E5EE0 /* INTUInterpolationFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTUInterpolationFunctions.h; sourceTree = "<group>"; };
+		EEAD455C1B9D47E5000E5EE0 /* INTUInterpolationFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTUInterpolationFunctions.m; sourceTree = "<group>"; };
+		EEAD455E1B9D47E5000E5EE0 /* INTUSpringSolver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = INTUSpringSolver.c; sourceTree = "<group>"; };
+		EEAD455F1B9D47E5000E5EE0 /* INTUSpringSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTUSpringSolver.h; sourceTree = "<group>"; };
+		EEAD45601B9D47E5000E5EE0 /* INTUVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTUVector.h; sourceTree = "<group>"; };
+		EEAD45661B9D47EA000E5EE0 /* RemoteInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteInstance.h; sourceTree = "<group>"; };
+		EEAD45671B9D47EA000E5EE0 /* RemoteInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteInstance.m; sourceTree = "<group>"; };
+		EEAD456B1B9D47F0000E5EE0 /* ModelDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelDefines.h; sourceTree = "<group>"; };
+		EEAD456D1B9D47F0000E5EE0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		EEAD456E1B9D47F0000E5EE0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		EEAD45701B9D47F0000E5EE0 /* TmpFileStorageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmpFileStorageModel.h; sourceTree = "<group>"; };
+		EEAD45711B9D47F0000E5EE0 /* TmpFileStorageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TmpFileStorageModel.m; sourceTree = "<group>"; };
+		EEAD45821B9D4807000E5EE0 /* BWStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWStatusBarOverlay.h; sourceTree = "<group>"; };
+		EEAD45831B9D4807000E5EE0 /* BWStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWStatusBarOverlay.m; sourceTree = "<group>"; };
+		EEAD45841B9D4807000E5EE0 /* status-bar-pattern-black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "status-bar-pattern-black.jpg"; sourceTree = "<group>"; };
+		EEAD45851B9D4807000E5EE0 /* status-bar-pattern-black@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "status-bar-pattern-black@2x.jpg"; sourceTree = "<group>"; };
+		EEAD45861B9D4807000E5EE0 /* status-bar-pattern-default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "status-bar-pattern-default.jpg"; sourceTree = "<group>"; };
+		EEAD45871B9D4807000E5EE0 /* status-bar-pattern-default@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "status-bar-pattern-default@2x.jpg"; sourceTree = "<group>"; };
+		EEAD45881B9D4807000E5EE0 /* status-bar-progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-progress.png"; sourceTree = "<group>"; };
+		EEAD45891B9D4807000E5EE0 /* status-bar-progress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-progress@2x.png"; sourceTree = "<group>"; };
+		EEAD458B1B9D4807000E5EE0 /* SGActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGActionView.h; sourceTree = "<group>"; };
+		EEAD458C1B9D4807000E5EE0 /* SGActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGActionView.m; sourceTree = "<group>"; };
+		EEAD458D1B9D4807000E5EE0 /* SGAlertMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAlertMenu.h; sourceTree = "<group>"; };
+		EEAD458E1B9D4807000E5EE0 /* SGAlertMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAlertMenu.m; sourceTree = "<group>"; };
+		EEAD458F1B9D4807000E5EE0 /* SGBaseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBaseMenu.h; sourceTree = "<group>"; };
+		EEAD45901B9D4807000E5EE0 /* SGBaseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBaseMenu.m; sourceTree = "<group>"; };
+		EEAD45911B9D4807000E5EE0 /* SGGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGridMenu.h; sourceTree = "<group>"; };
+		EEAD45921B9D4807000E5EE0 /* SGGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGridMenu.m; sourceTree = "<group>"; };
+		EEAD45931B9D4807000E5EE0 /* SGSheetMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSheetMenu.h; sourceTree = "<group>"; };
+		EEAD45941B9D4807000E5EE0 /* SGSheetMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSheetMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +126,7 @@
 		EE9F5B7A1B9D38F600504355 = {
 			isa = PBXGroup;
 			children = (
+				EEAD44D91B9D45E8000E5EE0 /* HandsUpApp.mobileprovision */,
 				EE9F5B851B9D38F600504355 /* handsup */,
 				EE9F5BA21B9D38F600504355 /* handsupTests */,
 				EE9F5B841B9D38F600504355 /* Products */,
@@ -89,6 +145,11 @@
 		EE9F5B851B9D38F600504355 /* handsup */ = {
 			isa = PBXGroup;
 			children = (
+				EEAD45801B9D4807000E5EE0 /* Views */,
+				EEAD457F1B9D4801000E5EE0 /* Controllers */,
+				EEAD45691B9D47F0000E5EE0 /* Models */,
+				EEAD45651B9D47EA000E5EE0 /* RemoteInstance */,
+				EEAD45561B9D47E5000E5EE0 /* INTUAnimationEngine */,
 				EE9F5BC11B9D3F5300504355 /* main */,
 				EE9F5B861B9D38F600504355 /* Supporting Files */,
 			);
@@ -135,6 +196,123 @@
 				EE9F5B981B9D38F600504355 /* LaunchScreen.xib */,
 			);
 			name = main;
+			sourceTree = "<group>";
+		};
+		EEAD45561B9D47E5000E5EE0 /* INTUAnimationEngine */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD45571B9D47E5000E5EE0 /* INTUAnimationEngine.h */,
+				EEAD45581B9D47E5000E5EE0 /* INTUAnimationEngine.m */,
+				EEAD45591B9D47E5000E5EE0 /* INTUEasingFunctions.h */,
+				EEAD455A1B9D47E5000E5EE0 /* INTUEasingFunctions.m */,
+				EEAD455B1B9D47E5000E5EE0 /* INTUInterpolationFunctions.h */,
+				EEAD455C1B9D47E5000E5EE0 /* INTUInterpolationFunctions.m */,
+				EEAD455D1B9D47E5000E5EE0 /* SpringSolver */,
+			);
+			path = INTUAnimationEngine;
+			sourceTree = "<group>";
+		};
+		EEAD455D1B9D47E5000E5EE0 /* SpringSolver */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD455E1B9D47E5000E5EE0 /* INTUSpringSolver.c */,
+				EEAD455F1B9D47E5000E5EE0 /* INTUSpringSolver.h */,
+				EEAD45601B9D47E5000E5EE0 /* INTUVector.h */,
+			);
+			path = SpringSolver;
+			sourceTree = "<group>";
+		};
+		EEAD45651B9D47EA000E5EE0 /* RemoteInstance */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD45661B9D47EA000E5EE0 /* RemoteInstance.h */,
+				EEAD45671B9D47EA000E5EE0 /* RemoteInstance.m */,
+			);
+			path = RemoteInstance;
+			sourceTree = "<group>";
+		};
+		EEAD45691B9D47F0000E5EE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD456A1B9D47F0000E5EE0 /* Common */,
+				EEAD456C1B9D47F0000E5EE0 /* Reachability */,
+				EEAD456F1B9D47F0000E5EE0 /* TmpFileStorageModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EEAD456A1B9D47F0000E5EE0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD456B1B9D47F0000E5EE0 /* ModelDefines.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EEAD456C1B9D47F0000E5EE0 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD456D1B9D47F0000E5EE0 /* Reachability.h */,
+				EEAD456E1B9D47F0000E5EE0 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		EEAD456F1B9D47F0000E5EE0 /* TmpFileStorageModel */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD45701B9D47F0000E5EE0 /* TmpFileStorageModel.h */,
+				EEAD45711B9D47F0000E5EE0 /* TmpFileStorageModel.m */,
+			);
+			path = TmpFileStorageModel;
+			sourceTree = "<group>";
+		};
+		EEAD457F1B9D4801000E5EE0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EEAD45801B9D4807000E5EE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD45811B9D4807000E5EE0 /* BWStatusBarOverlay */,
+				EEAD458A1B9D4807000E5EE0 /* SGActionView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EEAD45811B9D4807000E5EE0 /* BWStatusBarOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD45821B9D4807000E5EE0 /* BWStatusBarOverlay.h */,
+				EEAD45831B9D4807000E5EE0 /* BWStatusBarOverlay.m */,
+				EEAD45841B9D4807000E5EE0 /* status-bar-pattern-black.jpg */,
+				EEAD45851B9D4807000E5EE0 /* status-bar-pattern-black@2x.jpg */,
+				EEAD45861B9D4807000E5EE0 /* status-bar-pattern-default.jpg */,
+				EEAD45871B9D4807000E5EE0 /* status-bar-pattern-default@2x.jpg */,
+				EEAD45881B9D4807000E5EE0 /* status-bar-progress.png */,
+				EEAD45891B9D4807000E5EE0 /* status-bar-progress@2x.png */,
+			);
+			path = BWStatusBarOverlay;
+			sourceTree = "<group>";
+		};
+		EEAD458A1B9D4807000E5EE0 /* SGActionView */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD458B1B9D4807000E5EE0 /* SGActionView.h */,
+				EEAD458C1B9D4807000E5EE0 /* SGActionView.m */,
+				EEAD458D1B9D4807000E5EE0 /* SGAlertMenu.h */,
+				EEAD458E1B9D4807000E5EE0 /* SGAlertMenu.m */,
+				EEAD458F1B9D4807000E5EE0 /* SGBaseMenu.h */,
+				EEAD45901B9D4807000E5EE0 /* SGBaseMenu.m */,
+				EEAD45911B9D4807000E5EE0 /* SGGridMenu.h */,
+				EEAD45921B9D4807000E5EE0 /* SGGridMenu.m */,
+				EEAD45931B9D4807000E5EE0 /* SGSheetMenu.h */,
+				EEAD45941B9D4807000E5EE0 /* SGSheetMenu.m */,
+			);
+			path = SGActionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +396,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAD459A1B9D4807000E5EE0 /* status-bar-progress.png in Resources */,
 				EE9F5B951B9D38F600504355 /* Main.storyboard in Resources */,
+				EEAD44DA1B9D45E8000E5EE0 /* HandsUpApp.mobileprovision in Resources */,
+				EEAD45961B9D4807000E5EE0 /* status-bar-pattern-black.jpg in Resources */,
+				EEAD45971B9D4807000E5EE0 /* status-bar-pattern-black@2x.jpg in Resources */,
+				EEAD45981B9D4807000E5EE0 /* status-bar-pattern-default.jpg in Resources */,
+				EEAD45991B9D4807000E5EE0 /* status-bar-pattern-default@2x.jpg in Resources */,
+				EEAD459B1B9D4807000E5EE0 /* status-bar-progress@2x.png in Resources */,
 				EE9F5BB91B9D3D7500504355 /* Localizable.strings in Resources */,
 				EE9F5B9A1B9D38F600504355 /* LaunchScreen.xib in Resources */,
 				EE9F5B971B9D38F600504355 /* Images.xcassets in Resources */,
@@ -240,8 +425,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAD45A01B9D4807000E5EE0 /* SGSheetMenu.m in Sources */,
+				EEAD45631B9D47E5000E5EE0 /* INTUInterpolationFunctions.m in Sources */,
+				EEAD45731B9D47F0000E5EE0 /* TmpFileStorageModel.m in Sources */,
 				EE9F5B8C1B9D38F600504355 /* AppDelegate.m in Sources */,
+				EEAD459E1B9D4807000E5EE0 /* SGBaseMenu.m in Sources */,
+				EEAD45641B9D47E5000E5EE0 /* INTUSpringSolver.c in Sources */,
+				EEAD459D1B9D4807000E5EE0 /* SGAlertMenu.m in Sources */,
+				EEAD459C1B9D4807000E5EE0 /* SGActionView.m in Sources */,
 				EE9F5B921B9D38F600504355 /* ViewController.m in Sources */,
+				EEAD45681B9D47EA000E5EE0 /* RemoteInstance.m in Sources */,
+				EEAD45611B9D47E5000E5EE0 /* INTUAnimationEngine.m in Sources */,
+				EEAD459F1B9D4807000E5EE0 /* SGGridMenu.m in Sources */,
+				EEAD45621B9D47E5000E5EE0 /* INTUEasingFunctions.m in Sources */,
+				EEAD45951B9D4807000E5EE0 /* BWStatusBarOverlay.m in Sources */,
+				EEAD45721B9D47F0000E5EE0 /* Reachability.m in Sources */,
 				EE9F5B891B9D38F600504355 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +659,7 @@
 				EE9F5BAB1B9D38F600504355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE9F5BAC1B9D38F600504355 /* Build configuration list for PBXNativeTarget "handsupTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +668,7 @@
 				EE9F5BAE1B9D38F600504355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
