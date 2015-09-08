@@ -42,6 +42,9 @@
 		EEAD45AD1B9D5F6B000E5EE0 /* CatchUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */; };
 		EEAD45B01B9D6599000E5EE0 /* InfoStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */; };
 		EEAD45B31B9D72B1000E5EE0 /* InfoSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */; };
+		EEBF1DDE1B9EA98E00E3951C /* HandsUpBoundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEBF1DDD1B9EA98D00E3951C /* HandsUpBoundle.bundle */; };
+		EEBF1DE21B9EBB4B00E3951C /* HandsUpTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1DE11B9EBB4B00E3951C /* HandsUpTitleView.m */; };
+		EEBF1DE41B9EBB5A00E3951C /* HandsUpTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBF1DE31B9EBB5A00E3951C /* HandsUpTitleView.xib */; };
 		EEC9B4CE1B9E8489006806ED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9B4CD1B9E8489006806ED /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +125,10 @@
 		EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoStationController.m; sourceTree = "<group>"; };
 		EEAD45B11B9D72B1000E5EE0 /* InfoSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoSegue.h; sourceTree = "<group>"; };
 		EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoSegue.m; sourceTree = "<group>"; };
+		EEBF1DDD1B9EA98D00E3951C /* HandsUpBoundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HandsUpBoundle.bundle; sourceTree = "<group>"; };
+		EEBF1DE01B9EBB4B00E3951C /* HandsUpTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpTitleView.h; sourceTree = "<group>"; };
+		EEBF1DE11B9EBB4B00E3951C /* HandsUpTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpTitleView.m; sourceTree = "<group>"; };
+		EEBF1DE31B9EBB5A00E3951C /* HandsUpTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandsUpTitleView.xib; sourceTree = "<group>"; };
 		EEC9B4CC1B9E8489006806ED /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EEC9B4CD1B9E8489006806ED /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +188,7 @@
 		EE9F5B861B9D38F600504355 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EEBF1DDD1B9EA98D00E3951C /* HandsUpBoundle.bundle */,
 				EE9F5B871B9D38F600504355 /* Info.plist */,
 				EE9F5B881B9D38F600504355 /* main.m */,
 				EE9F5BB71B9D3D7200504355 /* Localizable.strings */,
@@ -307,6 +315,7 @@
 		EEAD45801B9D4807000E5EE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EEBF1DDF1B9EBB3000E3951C /* HandsUpTitleView */,
 				EEAD45811B9D4807000E5EE0 /* BWStatusBarOverlay */,
 				EEAD458A1B9D4807000E5EE0 /* SGActionView */,
 			);
@@ -356,6 +365,16 @@
 				EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		EEBF1DDF1B9EBB3000E3951C /* HandsUpTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				EEBF1DE01B9EBB4B00E3951C /* HandsUpTitleView.h */,
+				EEBF1DE11B9EBB4B00E3951C /* HandsUpTitleView.m */,
+				EEBF1DE31B9EBB5A00E3951C /* HandsUpTitleView.xib */,
+			);
+			path = HandsUpTitleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEAD459A1B9D4807000E5EE0 /* status-bar-progress.png in Resources */,
+				EEBF1DDE1B9EA98E00E3951C /* HandsUpBoundle.bundle in Resources */,
 				EE9F5B951B9D38F600504355 /* Main.storyboard in Resources */,
 				EEAD44DA1B9D45E8000E5EE0 /* HandsUpApp.mobileprovision in Resources */,
 				EEAD45961B9D4807000E5EE0 /* status-bar-pattern-black.jpg in Resources */,
@@ -451,6 +471,7 @@
 				EE9F5B9A1B9D38F600504355 /* LaunchScreen.xib in Resources */,
 				EE9F5B971B9D38F600504355 /* Images.xcassets in Resources */,
 				EE9F5BBD1B9D3D9000504355 /* InfoPlist.strings in Resources */,
+				EEBF1DE41B9EBB5A00E3951C /* HandsUpTitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +510,7 @@
 				EEAD45B31B9D72B1000E5EE0 /* InfoSegue.m in Sources */,
 				EEAD45A41B9D4B9F000E5EE0 /* HandsUpSegue.m in Sources */,
 				EEAD45721B9D47F0000E5EE0 /* Reachability.m in Sources */,
+				EEBF1DE21B9EBB4B00E3951C /* HandsUpTitleView.m in Sources */,
 				EEAD45AD1B9D5F6B000E5EE0 /* CatchUpSegue.m in Sources */,
 				EE9F5B891B9D38F600504355 /* main.m in Sources */,
 			);

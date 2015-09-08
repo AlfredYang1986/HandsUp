@@ -16,46 +16,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="HandsUp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ph1-N8-EdR">
-                                <rect key="frame" x="281" y="289" width="101" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4B-Qq-wXa">
-                                <rect key="frame" x="345" y="325" width="37" height="30"/>
-                                <state key="normal" title="Right">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rigthBtnSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="zlh-5G-JG9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFf-O8-iOv">
-                                <rect key="frame" x="277" y="325" width="30" height="30"/>
-                                <state key="normal" title="Left">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="leftBtnSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="qTZ-hL-vek"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Ph1-N8-EdR" secondAttribute="centerX" id="Jn4-ya-eZX"/>
-                            <constraint firstAttribute="centerY" secondItem="Ph1-N8-EdR" secondAttribute="centerY" id="SWG-cf-plU"/>
-                            <constraint firstAttribute="centerX" secondItem="cFf-O8-iOv" secondAttribute="centerX" constant="50" id="YoK-QX-Nos"/>
-                            <constraint firstAttribute="centerX" secondItem="V4B-Qq-wXa" secondAttribute="centerX" constant="-50" id="lrV-st-fZ9"/>
-                            <constraint firstAttribute="centerY" secondItem="V4B-Qq-wXa" secondAttribute="centerY" constant="-30" id="pUa-Sz-3In"/>
-                            <constraint firstAttribute="centerY" secondItem="cFf-O8-iOv" secondAttribute="centerY" constant="-30" id="qYD-Je-WRm"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="handsLabel" destination="Ph1-N8-EdR" id="NAg-VW-pdS"/>
-                        <outlet property="left_btn" destination="cFf-O8-iOv" id="a7O-Fj-dTH"/>
-                        <outlet property="right_btn" destination="V4B-Qq-wXa" id="GoK-lr-hfp"/>
                         <segue destination="CPo-e9-Sa8" kind="custom" identifier="Info" customClass="InfoSegue" id="fqf-YL-ZMd"/>
                         <segue destination="qcb-Y9-CCv" kind="custom" identifier="CatchUp" customClass="CatchUpSegue" id="Ceb-38-y8M"/>
                     </connections>
@@ -99,7 +62,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1575035102" green="1" blue="0.2256678731" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141" id="RRP-C7-SWV"/>
                                     <constraint firstAttribute="centerX" secondItem="Ga4-WN-w8S" secondAttribute="centerX" id="UX9-uR-lWT"/>
@@ -116,13 +78,27 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="apn-dB-ow9">
+                                <rect key="frame" x="46" y="187" width="508" height="286"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="286" id="Dtg-GD-0YB"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zah-9z-SsO" id="EFG-o8-U2J"/>
+                                    <outlet property="delegate" destination="Zah-9z-SsO" id="y45-3G-Gxf"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="GgG-F3-RdE" secondAttribute="trailing" constant="-16" id="49p-P3-dbX"/>
+                            <constraint firstItem="apn-dB-ow9" firstAttribute="top" secondItem="GgG-F3-RdE" secondAttribute="bottom" constant="8" id="NrP-2c-t1l"/>
                             <constraint firstItem="GgG-F3-RdE" firstAttribute="top" secondItem="uZa-pk-d18" secondAttribute="bottom" id="UeG-hD-ldQ"/>
                             <constraint firstItem="GgG-F3-RdE" firstAttribute="top" secondItem="uZa-pk-d18" secondAttribute="bottom" id="Uye-hx-hNN"/>
                             <constraint firstItem="GgG-F3-RdE" firstAttribute="leading" secondItem="6rX-KG-MSZ" secondAttribute="leadingMargin" constant="-16" id="c8b-qU-y6f"/>
+                            <constraint firstItem="apn-dB-ow9" firstAttribute="leading" secondItem="6rX-KG-MSZ" secondAttribute="leadingMargin" constant="30" id="ehg-Eo-Iia"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="apn-dB-ow9" secondAttribute="trailing" constant="30" id="hz5-Rw-E7L"/>
                             <constraint firstItem="GgG-F3-RdE" firstAttribute="leading" secondItem="6rX-KG-MSZ" secondAttribute="leadingMargin" constant="-16" id="pzb-vd-0WH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GgG-F3-RdE" secondAttribute="trailing" constant="-16" id="sTa-CZ-Cg1"/>
                         </constraints>
@@ -136,7 +112,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="nGo-EP-baK"/>
                     <connections>
+                        <outlet property="queryView" destination="apn-dB-ow9" id="7r8-4n-VaJ"/>
                         <outlet property="titleContainer" destination="GgG-F3-RdE" id="EE6-7f-xRG"/>
+                        <outlet property="titleImg" destination="Ga4-WN-w8S" id="OsB-gL-Ff6"/>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="HandsSegue" customClass="HandsUpSegue" id="QqA-6C-Zy6"/>
                     </connections>
                 </viewController>
