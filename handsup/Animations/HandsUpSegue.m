@@ -14,14 +14,15 @@
 }
 
 -(void)perform {
-    
+   
     UIViewController *src = (UIViewController *) self.sourceViewController;
     UIViewController *dst = (UIViewController *) self.destinationViewController;
+    UINavigationController* nav = src.navigationController;
 
     UIView* src_view = src.view;
     UIView* dst_view = dst.view;
  
-    static const CGFloat kAnimationDuration = 1.f; // in seconds
+    static const CGFloat kAnimationDuration = 0.5; // in seconds
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
 
@@ -46,10 +47,9 @@
                                                      }
                                                      completion:^(BOOL finished) {
                                                          NSLog(@"%@", finished ? @"Animation Completed" : @"Animation Canceled");
-                                                         [src.navigationController pushViewController:dst animated:NO];
-//                                                         src.view = src_view;
-//                                                         animationView = nil;
-//                                                         [dst.view removeFromSuperview];
+                                                         [nav popViewControllerAnimated:NO];
+                                                         [nav pushViewController:dst animated:NO];
+                                                         [dst.view removeFromSuperview];
                                                      }];
 }
 @end

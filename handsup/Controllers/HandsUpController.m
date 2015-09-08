@@ -9,7 +9,7 @@
 #import "HandsUpController.h"
 #import "AppDelegate.h"
 #import "HandsUpSegue.h"
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "INTUAnimationEngine.h"
 
 @interface HandsUpController () {
@@ -64,7 +64,7 @@
     if (self.view.frame.size.height != height) {
         _handsLabel.center = CGPointMake(_handsLabel.center.x, _handsLabel.center.y + height / 2);
         _right_btn.center = CGPointMake(_right_btn.center.x, _left_btn.center.y + height / 2);
-        _left_btn.center = CGPointMake(_right_btn.center.x, _left_btn.center.y + height / 2);
+        _left_btn.center = CGPointMake(_left_btn.center.x, _left_btn.center.y + height / 2);
     }
 }
 
@@ -99,37 +99,37 @@
 - (void)backToMainController {
    
     AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    UINavigationController* nav = self.navigationController;
     UIViewController* src = self;
-    UIViewController* dst = app.mainController;
-    [src.navigationController popViewControllerAnimated:NO];
+    MainViewController* dst = app.mainController;
     
-    static const CGFloat kAnimationDuration = 1.f; // in seconds
+    static const CGFloat kAnimationDuration = 0.5; // in seconds
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     
-    CGRect rc_1 = CGRectMake(0, height, width, height);
-    CGRect rc_2 = CGRectMake(0, -height, width, height * 2);
+    CGRect rc_1 = CGRectMake(0, -height, width, height * 2);
+    CGRect rc_2 = CGRectMake(0, 0, width, height);
     CGRect rc_3 = CGRectMake(0, 0, width, height * 2);
-    CGRect rc_4 = CGRectMake(0, 0, width, height);
-    
-    [dst.view addSubview:src.view];
-    dst.view.frame = rc_2;
+
     src.view.frame = rc_1;
-   
+    dst.view.frame = rc_2;
+    dst.isSegueBack = YES;
+
+    [src.view addSubview:dst.view];
+
     [INTUAnimationEngine animateWithDuration:kAnimationDuration
                                        delay:0.0
                                       easing:INTUEaseInOutQuadratic
                                      options:INTUAnimationOptionNone
                                   animations:^(CGFloat progress) {
-//                                     src.view.frame = INTUInterpolateCGRect(rc_1, rc_3, progress);
-                                     dst.view.frame = INTUInterpolateCGRect(rc_2, rc_3, progress);
-                                      
-                                                         // NSLog(@"Progress: %.2f", progress);
+                                       src.view.frame = INTUInterpolateCGRect(rc_1, rc_3, progress);
+                                       // NSLog(@"Progress: %.2f", progress);
                                    }
                                  completion:^(BOOL finished) {
                                      NSLog(@"%@", finished ? @"Animation Completed" : @"Animation Canceled");
-                                     [src.view removeFromSuperview];
-                                     dst.view.frame = rc_4;
+                                     [dst.view removeFromSuperview];
+                                     [nav popToRootViewControllerAnimated:NO];
+                                     [nav pushViewController:dst animated:NO];
                                  }];
 }
 @end

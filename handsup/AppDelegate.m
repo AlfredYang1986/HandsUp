@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "InfoStationController.h"
 #import "HandsUpController.h"
 #import "CatchUpController.h"

@@ -42,6 +42,7 @@
 		EEAD45AD1B9D5F6B000E5EE0 /* CatchUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */; };
 		EEAD45B01B9D6599000E5EE0 /* InfoStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */; };
 		EEAD45B31B9D72B1000E5EE0 /* InfoSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */; };
+		EEC9B4CE1B9E8489006806ED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9B4CD1B9E8489006806ED /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,8 @@
 		EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoStationController.m; sourceTree = "<group>"; };
 		EEAD45B11B9D72B1000E5EE0 /* InfoSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoSegue.h; sourceTree = "<group>"; };
 		EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoSegue.m; sourceTree = "<group>"; };
+		EEC9B4CC1B9E8489006806ED /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EEC9B4CD1B9E8489006806ED /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +298,8 @@
 				EEAD45A91B9D4F11000E5EE0 /* CatchUpController.m */,
 				EEAD45AE1B9D6599000E5EE0 /* InfoStationController.h */,
 				EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */,
+				EEC9B4CC1B9E8489006806ED /* MainViewController.h */,
+				EEC9B4CD1B9E8489006806ED /* MainViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				EEAD459D1B9D4807000E5EE0 /* SGAlertMenu.m in Sources */,
 				EEAD459C1B9D4807000E5EE0 /* SGActionView.m in Sources */,
 				EEAD45AA1B9D4F11000E5EE0 /* CatchUpController.m in Sources */,
+				EEC9B4CE1B9E8489006806ED /* MainViewController.m in Sources */,
 				EE9F5B921B9D38F600504355 /* ViewController.m in Sources */,
 				EEAD45681B9D47EA000E5EE0 /* RemoteInstance.m in Sources */,
 				EEAD45611B9D47E5000E5EE0 /* INTUAnimationEngine.m in Sources */,
