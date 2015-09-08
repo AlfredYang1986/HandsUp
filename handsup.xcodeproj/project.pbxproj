@@ -37,14 +37,20 @@
 		EEAD459F1B9D4807000E5EE0 /* SGGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45921B9D4807000E5EE0 /* SGGridMenu.m */; };
 		EEAD45A01B9D4807000E5EE0 /* SGSheetMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45941B9D4807000E5EE0 /* SGSheetMenu.m */; };
 		EEAD45A41B9D4B9F000E5EE0 /* HandsUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45A31B9D4B9F000E5EE0 /* HandsUpSegue.m */; };
-		EEAD45A71B9D4EC3000E5EE0 /* HandsUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45A61B9D4EC3000E5EE0 /* HandsUpController.m */; };
-		EEAD45AA1B9D4F11000E5EE0 /* CatchUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45A91B9D4F11000E5EE0 /* CatchUpController.m */; };
 		EEAD45AD1B9D5F6B000E5EE0 /* CatchUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */; };
-		EEAD45B01B9D6599000E5EE0 /* InfoStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */; };
 		EEAD45B31B9D72B1000E5EE0 /* InfoSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */; };
 		EEBF1DDE1B9EA98E00E3951C /* HandsUpBoundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEBF1DDD1B9EA98D00E3951C /* HandsUpBoundle.bundle */; };
 		EEBF1DE21B9EBB4B00E3951C /* HandsUpTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1DE11B9EBB4B00E3951C /* HandsUpTitleView.m */; };
 		EEBF1DE41B9EBB5A00E3951C /* HandsUpTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBF1DE31B9EBB5A00E3951C /* HandsUpTitleView.xib */; };
+		EEBF1DEA1B9EE64D00E3951C /* CatchUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1DE91B9EE64D00E3951C /* CatchUpView.m */; };
+		EEBF1DEC1B9EE65900E3951C /* CatchUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBF1DEB1B9EE65900E3951C /* CatchUpView.xib */; };
+		EEBF1DF61B9F149D00E3951C /* CatchUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1DEF1B9F149D00E3951C /* CatchUpController.m */; };
+		EEBF1DF71B9F149D00E3951C /* HandsUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1DF21B9F149D00E3951C /* HandsUpController.m */; };
+		EEBF1DF81B9F149D00E3951C /* InfoStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1DF51B9F149D00E3951C /* InfoStationController.m */; };
+		EEBF1DFC1B9F14D000E3951C /* InfoStationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1DFB1B9F14D000E3951C /* InfoStationView.m */; };
+		EEBF1DFE1B9F14E100E3951C /* InfoStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBF1DFD1B9F14E100E3951C /* InfoStationView.xib */; };
+		EEBF1E011B9F162800E3951C /* InfoStationMySchool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1E001B9F162800E3951C /* InfoStationMySchool.m */; };
+		EEBF1E041B9F171D00E3951C /* InfoStationSearchSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1E031B9F171D00E3951C /* InfoStationSearchSchool.m */; };
 		EEC9B4CE1B9E8489006806ED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9B4CD1B9E8489006806ED /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -115,20 +121,30 @@
 		EEAD45941B9D4807000E5EE0 /* SGSheetMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSheetMenu.m; sourceTree = "<group>"; };
 		EEAD45A21B9D4B9F000E5EE0 /* HandsUpSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpSegue.h; sourceTree = "<group>"; };
 		EEAD45A31B9D4B9F000E5EE0 /* HandsUpSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpSegue.m; sourceTree = "<group>"; };
-		EEAD45A51B9D4EC3000E5EE0 /* HandsUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpController.h; sourceTree = "<group>"; };
-		EEAD45A61B9D4EC3000E5EE0 /* HandsUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpController.m; sourceTree = "<group>"; };
-		EEAD45A81B9D4F11000E5EE0 /* CatchUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchUpController.h; sourceTree = "<group>"; };
-		EEAD45A91B9D4F11000E5EE0 /* CatchUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpController.m; sourceTree = "<group>"; };
 		EEAD45AB1B9D5F6B000E5EE0 /* CatchUpSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchUpSegue.h; sourceTree = "<group>"; };
 		EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpSegue.m; sourceTree = "<group>"; };
-		EEAD45AE1B9D6599000E5EE0 /* InfoStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoStationController.h; sourceTree = "<group>"; };
-		EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoStationController.m; sourceTree = "<group>"; };
 		EEAD45B11B9D72B1000E5EE0 /* InfoSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoSegue.h; sourceTree = "<group>"; };
 		EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoSegue.m; sourceTree = "<group>"; };
 		EEBF1DDD1B9EA98D00E3951C /* HandsUpBoundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HandsUpBoundle.bundle; sourceTree = "<group>"; };
 		EEBF1DE01B9EBB4B00E3951C /* HandsUpTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpTitleView.h; sourceTree = "<group>"; };
 		EEBF1DE11B9EBB4B00E3951C /* HandsUpTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpTitleView.m; sourceTree = "<group>"; };
 		EEBF1DE31B9EBB5A00E3951C /* HandsUpTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandsUpTitleView.xib; sourceTree = "<group>"; };
+		EEBF1DE81B9EE64D00E3951C /* CatchUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchUpView.h; sourceTree = "<group>"; };
+		EEBF1DE91B9EE64D00E3951C /* CatchUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpView.m; sourceTree = "<group>"; };
+		EEBF1DEB1B9EE65900E3951C /* CatchUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatchUpView.xib; sourceTree = "<group>"; };
+		EEBF1DEE1B9F149D00E3951C /* CatchUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchUpController.h; sourceTree = "<group>"; };
+		EEBF1DEF1B9F149D00E3951C /* CatchUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpController.m; sourceTree = "<group>"; };
+		EEBF1DF11B9F149D00E3951C /* HandsUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpController.h; sourceTree = "<group>"; };
+		EEBF1DF21B9F149D00E3951C /* HandsUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpController.m; sourceTree = "<group>"; };
+		EEBF1DF41B9F149D00E3951C /* InfoStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoStationController.h; sourceTree = "<group>"; };
+		EEBF1DF51B9F149D00E3951C /* InfoStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoStationController.m; sourceTree = "<group>"; };
+		EEBF1DFA1B9F14D000E3951C /* InfoStationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoStationView.h; sourceTree = "<group>"; };
+		EEBF1DFB1B9F14D000E3951C /* InfoStationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoStationView.m; sourceTree = "<group>"; };
+		EEBF1DFD1B9F14E100E3951C /* InfoStationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoStationView.xib; sourceTree = "<group>"; };
+		EEBF1DFF1B9F162800E3951C /* InfoStationMySchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoStationMySchool.h; sourceTree = "<group>"; };
+		EEBF1E001B9F162800E3951C /* InfoStationMySchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoStationMySchool.m; sourceTree = "<group>"; };
+		EEBF1E021B9F171D00E3951C /* InfoStationSearchSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoStationSearchSchool.h; sourceTree = "<group>"; };
+		EEBF1E031B9F171D00E3951C /* InfoStationSearchSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoStationSearchSchool.m; sourceTree = "<group>"; };
 		EEC9B4CC1B9E8489006806ED /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EEC9B4CD1B9E8489006806ED /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -300,12 +316,9 @@
 		EEAD457F1B9D4801000E5EE0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EEAD45A51B9D4EC3000E5EE0 /* HandsUpController.h */,
-				EEAD45A61B9D4EC3000E5EE0 /* HandsUpController.m */,
-				EEAD45A81B9D4F11000E5EE0 /* CatchUpController.h */,
-				EEAD45A91B9D4F11000E5EE0 /* CatchUpController.m */,
-				EEAD45AE1B9D6599000E5EE0 /* InfoStationController.h */,
-				EEAD45AF1B9D6599000E5EE0 /* InfoStationController.m */,
+				EEBF1DED1B9F149D00E3951C /* CatchUp */,
+				EEBF1DF01B9F149D00E3951C /* HandsUp */,
+				EEBF1DF31B9F149D00E3951C /* InfoStation */,
 				EEC9B4CC1B9E8489006806ED /* MainViewController.h */,
 				EEC9B4CD1B9E8489006806ED /* MainViewController.m */,
 			);
@@ -315,6 +328,8 @@
 		EEAD45801B9D4807000E5EE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EEBF1DF91B9F14BE00E3951C /* InfoStationView */,
+				EEBF1DE71B9EE63D00E3951C /* CatchUpView */,
 				EEBF1DDF1B9EBB3000E3951C /* HandsUpTitleView */,
 				EEAD45811B9D4807000E5EE0 /* BWStatusBarOverlay */,
 				EEAD458A1B9D4807000E5EE0 /* SGActionView */,
@@ -375,6 +390,57 @@
 				EEBF1DE31B9EBB5A00E3951C /* HandsUpTitleView.xib */,
 			);
 			path = HandsUpTitleView;
+			sourceTree = "<group>";
+		};
+		EEBF1DE71B9EE63D00E3951C /* CatchUpView */ = {
+			isa = PBXGroup;
+			children = (
+				EEBF1DE81B9EE64D00E3951C /* CatchUpView.h */,
+				EEBF1DE91B9EE64D00E3951C /* CatchUpView.m */,
+				EEBF1DEB1B9EE65900E3951C /* CatchUpView.xib */,
+			);
+			path = CatchUpView;
+			sourceTree = "<group>";
+		};
+		EEBF1DED1B9F149D00E3951C /* CatchUp */ = {
+			isa = PBXGroup;
+			children = (
+				EEBF1DEE1B9F149D00E3951C /* CatchUpController.h */,
+				EEBF1DEF1B9F149D00E3951C /* CatchUpController.m */,
+			);
+			path = CatchUp;
+			sourceTree = "<group>";
+		};
+		EEBF1DF01B9F149D00E3951C /* HandsUp */ = {
+			isa = PBXGroup;
+			children = (
+				EEBF1DF11B9F149D00E3951C /* HandsUpController.h */,
+				EEBF1DF21B9F149D00E3951C /* HandsUpController.m */,
+			);
+			path = HandsUp;
+			sourceTree = "<group>";
+		};
+		EEBF1DF31B9F149D00E3951C /* InfoStation */ = {
+			isa = PBXGroup;
+			children = (
+				EEBF1DF41B9F149D00E3951C /* InfoStationController.h */,
+				EEBF1DF51B9F149D00E3951C /* InfoStationController.m */,
+				EEBF1DFF1B9F162800E3951C /* InfoStationMySchool.h */,
+				EEBF1E001B9F162800E3951C /* InfoStationMySchool.m */,
+				EEBF1E021B9F171D00E3951C /* InfoStationSearchSchool.h */,
+				EEBF1E031B9F171D00E3951C /* InfoStationSearchSchool.m */,
+			);
+			path = InfoStation;
+			sourceTree = "<group>";
+		};
+		EEBF1DF91B9F14BE00E3951C /* InfoStationView */ = {
+			isa = PBXGroup;
+			children = (
+				EEBF1DFA1B9F14D000E3951C /* InfoStationView.h */,
+				EEBF1DFB1B9F14D000E3951C /* InfoStationView.m */,
+				EEBF1DFD1B9F14E100E3951C /* InfoStationView.xib */,
+			);
+			path = InfoStationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +529,7 @@
 				EE9F5B951B9D38F600504355 /* Main.storyboard in Resources */,
 				EEAD44DA1B9D45E8000E5EE0 /* HandsUpApp.mobileprovision in Resources */,
 				EEAD45961B9D4807000E5EE0 /* status-bar-pattern-black.jpg in Resources */,
+				EEBF1DEC1B9EE65900E3951C /* CatchUpView.xib in Resources */,
 				EEAD45971B9D4807000E5EE0 /* status-bar-pattern-black@2x.jpg in Resources */,
 				EEAD45981B9D4807000E5EE0 /* status-bar-pattern-default.jpg in Resources */,
 				EEAD45991B9D4807000E5EE0 /* status-bar-pattern-default@2x.jpg in Resources */,
@@ -470,6 +537,7 @@
 				EE9F5BB91B9D3D7500504355 /* Localizable.strings in Resources */,
 				EE9F5B9A1B9D38F600504355 /* LaunchScreen.xib in Resources */,
 				EE9F5B971B9D38F600504355 /* Images.xcassets in Resources */,
+				EEBF1DFE1B9F14E100E3951C /* InfoStationView.xib in Resources */,
 				EE9F5BBD1B9D3D9000504355 /* InfoPlist.strings in Resources */,
 				EEBF1DE41B9EBB5A00E3951C /* HandsUpTitleView.xib in Resources */,
 			);
@@ -489,20 +557,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBF1DEA1B9EE64D00E3951C /* CatchUpView.m in Sources */,
+				EEBF1DFC1B9F14D000E3951C /* InfoStationView.m in Sources */,
+				EEBF1DF81B9F149D00E3951C /* InfoStationController.m in Sources */,
+				EEBF1E011B9F162800E3951C /* InfoStationMySchool.m in Sources */,
+				EEBF1E041B9F171D00E3951C /* InfoStationSearchSchool.m in Sources */,
 				EEAD45A01B9D4807000E5EE0 /* SGSheetMenu.m in Sources */,
-				EEAD45A71B9D4EC3000E5EE0 /* HandsUpController.m in Sources */,
 				EEAD45631B9D47E5000E5EE0 /* INTUInterpolationFunctions.m in Sources */,
 				EEAD45731B9D47F0000E5EE0 /* TmpFileStorageModel.m in Sources */,
 				EE9F5B8C1B9D38F600504355 /* AppDelegate.m in Sources */,
 				EEAD459E1B9D4807000E5EE0 /* SGBaseMenu.m in Sources */,
-				EEAD45B01B9D6599000E5EE0 /* InfoStationController.m in Sources */,
+				EEBF1DF61B9F149D00E3951C /* CatchUpController.m in Sources */,
 				EEAD45641B9D47E5000E5EE0 /* INTUSpringSolver.c in Sources */,
 				EEAD459D1B9D4807000E5EE0 /* SGAlertMenu.m in Sources */,
 				EEAD459C1B9D4807000E5EE0 /* SGActionView.m in Sources */,
-				EEAD45AA1B9D4F11000E5EE0 /* CatchUpController.m in Sources */,
 				EEC9B4CE1B9E8489006806ED /* MainViewController.m in Sources */,
 				EE9F5B921B9D38F600504355 /* ViewController.m in Sources */,
 				EEAD45681B9D47EA000E5EE0 /* RemoteInstance.m in Sources */,
+				EEBF1DF71B9F149D00E3951C /* HandsUpController.m in Sources */,
 				EEAD45611B9D47E5000E5EE0 /* INTUAnimationEngine.m in Sources */,
 				EEAD459F1B9D4807000E5EE0 /* SGGridMenu.m in Sources */,
 				EEAD45621B9D47E5000E5EE0 /* INTUEasingFunctions.m in Sources */,

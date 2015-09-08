@@ -22,7 +22,7 @@
     UIView* src_view = src.view;
     UIView* dst_view = dst.view;
  
-    static const CGFloat kAnimationDuration = 2.f; // in seconds
+    static const CGFloat kAnimationDuration = 0.5; // in seconds
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
 

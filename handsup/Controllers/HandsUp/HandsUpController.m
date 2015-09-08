@@ -153,7 +153,7 @@
     UIViewController* src = self;
     MainViewController* dst = app.mainController;
     
-    static const CGFloat kAnimationDuration = 2.f; // in seconds
+    static const CGFloat kAnimationDuration = 0.5; // in seconds
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     
