@@ -35,6 +35,8 @@
     NSBundle *resourceBundle = [NSBundle bundleWithPath:bundlePath];
     NSString* filepath = [resourceBundle pathForResource:@"weibo" ofType:@"png"];
     [_weiboBtn setBackgroundImage:[UIImage imageNamed:filepath] forState:UIControlStateNormal];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLogedIn:) name:@"login success" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,12 +64,20 @@
 }
 
 - (IBAction)loginWithWeibo {
-//    AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
-//    [app.lm loginWithWeibo];
+    AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    [app.lm loginWithWeibo];
+//    [_parent.view removeFromSuperview];
+//    [tmp pushViewController:_parent animated:NO];
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        
+//    }];
+}
+
+- (void)userLogedIn:(NSNotification*)notification {
     [_parent.view removeFromSuperview];
     [tmp pushViewController:_parent animated:NO];
     [self dismissViewControllerAnimated:YES completion:^{
         
-    }];
+    }];   
 }
 @end

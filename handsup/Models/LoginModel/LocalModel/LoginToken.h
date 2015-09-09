@@ -13,11 +13,12 @@
 
 @interface LoginToken : NSManagedObject
 
-@property (nonatomic, retain) NSString * user_id;
 @property (nonatomic, retain) NSString * screen_name;
 @property (nonatomic, retain) NSString * screen_photo;
-@property (nonatomic, retain) CurrentToken *current;
+@property (nonatomic, retain) NSString * user_id;
+@property (nonatomic, retain) NSString * auth_token;
 @property (nonatomic, retain) NSSet *connectWith;
+@property (nonatomic, retain) CurrentToken *current;
 @property (nonatomic, retain) Profile *profile;
 @property (nonatomic, retain) NSSet *takeCourse;
 @end

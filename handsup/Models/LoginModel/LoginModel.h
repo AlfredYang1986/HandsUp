@@ -29,6 +29,9 @@
 
 - (void)loginWithWeibo;
 
+- (NSString*)getCurrentAuthToken;
+- (NSString*)getCurrentUserID;
+
 - (BOOL)hasLogin;
 - (LoginToken*)queryCurrentUser;
 @end

@@ -10,6 +10,7 @@
         <relationship name="who" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginToken" inverseName="current" inverseEntity="LoginToken" syncable="YES"/>
     </entity>
     <entity name="LoginToken" representedClassName="LoginToken" syncable="YES">
+        <attribute name="auth_token" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="screen_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="screen_photo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,10 +35,10 @@
         <relationship name="who" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginToken" inverseName="connectWith" inverseEntity="LoginToken" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CurrentToken" positionX="-531" positionY="63" width="128" height="58"/>
-        <element name="LoginToken" positionX="-288" positionY="38" width="128" height="148"/>
-        <element name="SNSConnection" positionX="-38" positionY="-9" width="128" height="148"/>
-        <element name="Profile" positionX="-279" positionY="288" width="128" height="103"/>
         <element name="Course" positionX="-29" positionY="281" width="128" height="103"/>
+        <element name="CurrentToken" positionX="-531" positionY="63" width="128" height="58"/>
+        <element name="LoginToken" positionX="-288" positionY="38" width="128" height="163"/>
+        <element name="Profile" positionX="-279" positionY="288" width="128" height="103"/>
+        <element name="SNSConnection" positionX="-38" positionY="-9" width="128" height="148"/>
     </elements>
 </model>

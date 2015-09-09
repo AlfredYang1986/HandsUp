@@ -81,6 +81,14 @@
     return self;
 }
 
+- (NSString*)getCurrentAuthToken {
+    return self.current_user.auth_token;
+}
+
+- (NSString*)getCurrentUserID {
+    return self.current_user.user_id;
+}
+
 - (BOOL)hasLogin {
     return self.current_user != nil;
 }
@@ -133,9 +141,9 @@
             /**
              *  3. save auth_toke and weibo user profile in local DB
              */
-//            _current_user = [self sendAuthProvidersName:@"weibo" andProvideUserId:weibo_user_id andProvideToken:weibo_token andProvideScreenName:screen_name];
-//            NSLog(@"new user token %@", _current_user.who.auth_token);
-//            NSLog(@"new user id %@", _current_user.who.user_id);
+            _current_user = [self sendAuthProvidersName:@"weibo" andProvideUserId:weibo_user_id andProvideToken:weibo_token];
+            NSLog(@"new user token %@", _current_user.auth_token);
+            NSLog(@"new user id %@", _current_user.user_id);
             
             /**
              * 3.1 user image
@@ -148,14 +156,14 @@
                     NSString* img_name = [TmpFileStorageModel generateFileName];
                     [TmpFileStorageModel saveToTmpDirWithImage:img withName:img_name];
                     
-//                    NSMutableDictionary* dic = [[NSMutableDictionary alloc]init];
-//                    [dic setValue:[self getCurrentAuthToken] forKey:@"auth_token"];
-//                    [dic setValue:[self getCurrentUserID] forKey:@"user_id"];
-//                    [dic setValue:img_name forKey:@"screen_photo"];
-//                    [self updateUserProfile:[dic copy]];
-//                    
-//                    dispatch_queue_t post_queue = dispatch_queue_create("post queue", nil);
-//                    dispatch_async(post_queue, ^(void){
+                    NSMutableDictionary* dic = [[NSMutableDictionary alloc]init];
+                    [dic setValue:[self getCurrentAuthToken] forKey:@"auth_token"];
+                    [dic setValue:[self getCurrentUserID] forKey:@"user_id"];
+                    [dic setValue:img_name forKey:@"screen_photo"];
+                    [self updateUserProfile:[dic copy]];
+                    
+                    dispatch_queue_t post_queue = dispatch_queue_create("post queue", nil);
+                    dispatch_async(post_queue, ^(void){
 //                        [RemoteInstance uploadPicture:img withName:img_name toUrl:[NSURL URLWithString:[POST_HOST_DOMAIN stringByAppendingString:POST_UPLOAD]] callBack:^(BOOL successs, NSString *message) {
 //                            if (successs) {
 //                                NSLog(@"post image success");
@@ -164,7 +172,7 @@
 //                                [alert show];
 //                            }
 //                        }];
-//                    });
+                    });
                 }
             });
       
@@ -177,6 +185,61 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:@"SNS login success" object:nil];
         }
     }];
+}
+
+- (LoginToken*)sendAuthProvidersName:(NSString*)provide_name andProvideUserId:(NSString*)provide_user_id andProvideToken:(NSString*)provide_token {
+  
+    NSMutableDictionary* dic = [[NSMutableDictionary alloc]init];
+    [dic setValue:provide_name forKey:@"provider_name"];
+    [dic setValue:provide_user_id forKey:@"provider_open_id"];
+    [dic setValue:provide_token forKey:@"provider_auth_token"];
+
+    NSError * error = nil;
+    NSData* jsonData =[NSJSONSerialization dataWithJSONObject:[dic copy] options:NSJSONWritingPrettyPrinted error:&error];
+
+    NSDictionary* result = [RemoteInstance remoteSeverRequestData:jsonData toUrl:[NSURL URLWithString:AUTH_WITH_SNS]];
+    
+    if ([[result objectForKey:@"status"] isEqualToString:@"ok"]) {
+        NSDictionary* reVal = [result objectForKey:@"result"];
+        
+        NSLog(@"result is : %@", reVal);
+        
+        NSString* user_id = (NSString*)[reVal objectForKey:@"user_id"];
+//        Providers* tmp = [Providers createProviderInContext:_doc.managedObjectContext ByName:provide_name andProviderUserId:provide_user_id andProviderToken:provide_token andProviderScreenName:provide_screen_name];
+//        LoginToken* user = [LoginToken createTokenInContext:_doc.managedObjectContext withUserID:user_id andAttrs:reVal];
+//        [user addConnectWithObject:tmp];
+       
+//        return [CurrentToken changeCurrentLoginUser:user inContext:_doc.managedObjectContext];
+        return nil;
+    } else {
+        NSDictionary* reError = [result objectForKey:@"error"];
+        NSString* msg = [reError objectForKey:@"message"];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:msg delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+        [alert show];
+        return nil;
+    }
+}
+
+- (BOOL)updateUserProfile:(NSDictionary*)attrs {
+
+    return YES;
+//    NSError * error = nil;
+//    NSData* jsonData =[NSJSONSerialization dataWithJSONObject:attrs options:NSJSONWritingPrettyPrinted error:&error];
+//    
+//    NSDictionary* result = [RemoteInstance remoteSeverRequestData:jsonData toUrl:[NSURL URLWithString:[PROFILE_HOST_DOMAIN stringByAppendingString:PROFILE_UPDATE_DETAILS]]];
+//    
+//    if ([[result objectForKey:@"status"] isEqualToString:@"ok"]) {
+//        NSDictionary* reVal = [result objectForKey:@"result"];
+//        NSString* user_id = (NSString*)[reVal objectForKey:@"user_id"];
+//        [LoginToken updataLoginUserInContext:_doc.managedObjectContext withUserID:user_id andAttrs:reVal];
+//        return YES;
+//    } else {
+//        NSDictionary* reError = [result objectForKey:@"error"];
+//        NSString* msg = [reError objectForKey:@"message"];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:msg delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+//        [alert show];
+//        return NO;
+//    }
 }
 
 #pragma mark -- weibo delegate

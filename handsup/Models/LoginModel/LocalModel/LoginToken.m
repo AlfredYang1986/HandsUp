@@ -15,11 +15,12 @@
 
 @implementation LoginToken
 
-@dynamic user_id;
 @dynamic screen_name;
 @dynamic screen_photo;
-@dynamic current;
+@dynamic user_id;
+@dynamic auth_token;
 @dynamic connectWith;
+@dynamic current;
 @dynamic profile;
 @dynamic takeCourse;
 

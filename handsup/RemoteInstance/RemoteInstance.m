@@ -72,7 +72,7 @@
     // 5> 设置data type
     NSString *strDatatype = [NSString stringWithFormat:@"json"];
     [request setValue:strDatatype forHTTPHeaderField:@"dataType"];
-    
+     
     
     // 3> 连接服务器发送请求
     //    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
