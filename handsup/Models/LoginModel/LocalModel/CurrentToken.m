@@ -7,7 +7,7 @@
 //
 
 #import "CurrentToken.h"
-//#import "NSManagedObject.h"
+#import "LoginToken.h"
 
 
 @implementation CurrentToken

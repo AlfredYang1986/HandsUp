@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSManagedObject;
+@class LoginToken;
 
 @interface SNSConnection : NSManagedObject
 
@@ -19,6 +19,6 @@
 @property (nonatomic, retain) NSString * providor_open_id;
 @property (nonatomic, retain) NSString * providor_auth_token;
 @property (nonatomic, retain) NSString * providor_refresh_token;
-@property (nonatomic, retain) NSManagedObject *who;
+@property (nonatomic, retain) LoginToken *who;
 
 @end

@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login Controller-->
         <scene sceneID="DE6-7o-j5T">
             <objects>
-                <viewController id="mYq-Jc-Vlc" customClass="LoginController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" id="mYq-Jc-Vlc" customClass="LoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Muz-Qe-T4r"/>
                         <viewControllerLayoutGuide type="bottom" id="Enw-5I-sfT"/>
@@ -16,35 +17,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小学生，请登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLD-X6-jyB">
-                                <rect key="frame" x="241" y="126" width="119" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdP-mP-dDn">
-                                <rect key="frame" x="282" y="347" width="46" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTd-nc-hpf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdP-mP-dDn">
+                                        <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Q5p-SE-snx"/>
+                                            <constraint firstAttribute="width" constant="30" id="ckp-7B-YTW"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginWithWeibo" destination="mYq-Jc-Vlc" eventType="touchUpInside" id="87i-MZ-IC6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="小学生，请登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLD-X6-jyB">
+                                        <rect key="frame" x="240" y="290" width="119" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Q5p-SE-snx"/>
-                                    <constraint firstAttribute="width" constant="30" id="ckp-7B-YTW"/>
+                                    <constraint firstItem="oLD-X6-jyB" firstAttribute="top" secondItem="kTd-nc-hpf" secondAttribute="top" constant="150" id="3Km-y2-Whm"/>
+                                    <constraint firstAttribute="centerX" secondItem="TdP-mP-dDn" secondAttribute="centerX" id="qW1-Cp-GHK"/>
+                                    <constraint firstItem="TdP-mP-dDn" firstAttribute="top" secondItem="kTd-nc-hpf" secondAttribute="top" constant="300" id="rAq-DW-Lrl"/>
+                                    <constraint firstAttribute="centerX" secondItem="oLD-X6-jyB" secondAttribute="centerX" id="wnl-vL-9Pi"/>
                                 </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginWithWeibo" destination="mYq-Jc-Vlc" eventType="touchUpInside" id="87i-MZ-IC6"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TdP-mP-dDn" firstAttribute="top" secondItem="oLD-X6-jyB" secondAttribute="bottom" constant="200" id="b6q-Xg-sz6"/>
-                            <constraint firstItem="oLD-X6-jyB" firstAttribute="top" secondItem="Muz-Qe-T4r" secondAttribute="bottom" constant="106" id="bD8-GW-zN4"/>
-                            <constraint firstAttribute="centerX" secondItem="oLD-X6-jyB" secondAttribute="centerX" id="etz-ft-l6d"/>
-                            <constraint firstAttribute="centerX" secondItem="TdP-mP-dDn" secondAttribute="centerX" id="qkD-KJ-7S2"/>
+                            <constraint firstItem="Enw-5I-sfT" firstAttribute="top" secondItem="kTd-nc-hpf" secondAttribute="bottom" id="HAn-Gh-Ec5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kTd-nc-hpf" secondAttribute="trailing" constant="-16" id="KBa-Ku-I4b"/>
+                            <constraint firstItem="kTd-nc-hpf" firstAttribute="top" secondItem="5yK-AY-Hju" secondAttribute="topMargin" id="VJz-To-dob"/>
+                            <constraint firstItem="kTd-nc-hpf" firstAttribute="leading" secondItem="5yK-AY-Hju" secondAttribute="leadingMargin" constant="-16" id="uee-Kf-c0s"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="kTd-nc-hpf" id="cjy-e8-wcs"/>
                         <outlet property="weiboBtn" destination="TdP-mP-dDn" id="zeX-6a-3sM"/>
                     </connections>
                 </viewController>

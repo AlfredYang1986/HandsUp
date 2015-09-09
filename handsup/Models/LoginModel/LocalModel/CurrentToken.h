@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSManagedObject;
+@class LoginToken;
 
 @interface CurrentToken : NSManagedObject
 
-@property (nonatomic, retain) NSManagedObject *who;
+@property (nonatomic, retain) LoginToken *who;
 
 @end

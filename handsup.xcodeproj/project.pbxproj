@@ -75,6 +75,7 @@
 		EEDC04B01B9FFCBA00600366 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDC04AF1B9FFCBA00600366 /* CoreGraphics.framework */; };
 		EEDC04B21B9FFCC500600366 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDC04B11B9FFCC500600366 /* libz.dylib */; };
 		EEDC04B41B9FFCD300600366 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDC04B31B9FFCD200600366 /* libsqlite3.dylib */; };
+		EEDC04B81BA0062600600366 /* CurrentToken+ContextOpt.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDC04B71BA0062600600366 /* CurrentToken+ContextOpt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,8 @@
 		EEDC04AF1B9FFCBA00600366 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EEDC04B11B9FFCC500600366 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		EEDC04B31B9FFCD200600366 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EEDC04B61BA0062600600366 /* CurrentToken+ContextOpt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CurrentToken+ContextOpt.h"; sourceTree = "<group>"; };
+		EEDC04B71BA0062600600366 /* CurrentToken+ContextOpt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CurrentToken+ContextOpt.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -567,6 +570,8 @@
 				EEDC04841B9FF21100600366 /* CurrentToken.h */,
 				EEDC04851B9FF21100600366 /* CurrentToken.m */,
 				EEDC04791B9FEE8400600366 /* LoginModel.xcdatamodeld */,
+				EEDC04B61BA0062600600366 /* CurrentToken+ContextOpt.h */,
+				EEDC04B71BA0062600600366 /* CurrentToken+ContextOpt.m */,
 			);
 			path = LocalModel;
 			sourceTree = "<group>";
@@ -737,6 +742,7 @@
 				EEAD45631B9D47E5000E5EE0 /* INTUInterpolationFunctions.m in Sources */,
 				EEAD45731B9D47F0000E5EE0 /* TmpFileStorageModel.m in Sources */,
 				EE9F5B8C1B9D38F600504355 /* AppDelegate.m in Sources */,
+				EEDC04B81BA0062600600366 /* CurrentToken+ContextOpt.m in Sources */,
 				EEAD459E1B9D4807000E5EE0 /* SGBaseMenu.m in Sources */,
 				EEBF1DF61B9F149D00E3951C /* CatchUpController.m in Sources */,
 				EEAD45641B9D47E5000E5EE0 /* INTUSpringSolver.c in Sources */,

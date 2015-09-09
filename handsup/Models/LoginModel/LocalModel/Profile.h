@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSManagedObject;
+@class LoginToken;
 
 @interface Profile : NSManagedObject
 
 @property (nonatomic, retain) NSString * school;
 @property (nonatomic, retain) NSString * decipline;
 @property (nonatomic, retain) NSNumber * years;
-@property (nonatomic, retain) NSManagedObject *who;
+@property (nonatomic, retain) LoginToken *who;
 
 @end

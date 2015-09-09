@@ -7,7 +7,7 @@
 //
 
 #import "Course.h"
-//#import "NSManagedObject.h"
+#import "LoginToken.h"
 
 
 @implementation Course

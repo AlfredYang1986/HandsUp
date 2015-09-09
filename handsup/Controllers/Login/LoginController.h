@@ -10,4 +10,5 @@
 
 @interface LoginController : UIViewController
 
+@property (nonatomic, weak, setter=setBackgroudParent:) UIViewController* parent;
 @end

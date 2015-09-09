@@ -13,6 +13,9 @@
 #import "INTUAnimationEngine.h"
 
 #import "HandsUpTitleView.h"
+#import "AppDelegate.h"
+#import "LoginModel.h"
+#import "LoginController.h"
 
 @interface HandsUpController () <UITableViewDataSource, UITableViewDelegate, HandsUpTitleViewProtocol> {
 
@@ -221,6 +224,17 @@
 }
 
 - (void)plusBtnSelected {
-    [self performSegueWithIdentifier:@"HandsUpCreate" sender:nil];
+   
+    AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    if (app.lm.hasLogin) {
+        [self performSegueWithIdentifier:@"HandsUpCreate" sender:nil];
+    } else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+        LoginController* lc = [storyboard instantiateViewControllerWithIdentifier:@"LoginController"];
+        [self presentViewController:lc animated:YES completion: ^(void){
+            lc.parent = self;
+        }];
+    }
+    
 }
 @end

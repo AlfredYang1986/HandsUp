@@ -21,10 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+   
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appIsReady:) name:@"app ready" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLogedIn:) name:@"login success" object:nil];
     
-    [self performSegueWithIdentifier:@"MainSegue" sender:nil];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -35,5 +36,13 @@
     if ([segue.identifier isEqualToString:@"MainSegue"]) {
     
     }
+}
+
+- (void)appIsReady:(NSNotification*)notification {
+    [self performSegueWithIdentifier:@"MainSegue" sender:nil];
+}
+
+- (void)userLogedIn:(NSNotification*)notification {
+    
 }
 @end

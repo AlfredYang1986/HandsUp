@@ -7,7 +7,7 @@
 //
 
 #import "SNSConnection.h"
-//#import "NSManagedObject.h"
+#import "LoginToken.h"
 
 
 @implementation SNSConnection

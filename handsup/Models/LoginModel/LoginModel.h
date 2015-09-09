@@ -16,13 +16,19 @@
 
 @class WeiboUser;
 @class AppDelegate;
+@class CurrentToken;
+@class LoginToken;
 
 @interface LoginModel : NSObject <WeiboSDKDelegate>
 
 @property (nonatomic, strong) UIManagedDocument* doc;
 @property (nonatomic, weak) AppDelegate * delegate;
+@property (nonatomic, strong, readonly, getter=queryCurrentUser) LoginToken* current_user;
 
 - (id)initWithAppDelegate:(AppDelegate*)app;
 
 - (void)loginWithWeibo;
+
+- (BOOL)hasLogin;
+- (LoginToken*)queryCurrentUser;
 @end

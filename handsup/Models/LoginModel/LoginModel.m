@@ -11,6 +11,9 @@
 #import "ModelDefines.h"
 
 #import "CurrentToken.h"
+#import "LoginModel.h"
+#import "CurrentToken+ContextOpt.h"
+
 #import "WeiboUser.h"
 
 #import "RemoteInstance.h"
@@ -20,7 +23,7 @@
 
 }
 
-@property (strong, nonatomic) CurrentToken* current_user;
+@property (strong, nonatomic) LoginToken* current_user;
 
 /**
  * for weibo login
@@ -33,6 +36,8 @@
 
 @synthesize doc = _doc;
 @synthesize delegate = _delegate;
+
+@synthesize current_user = _current_user;
 
 - (void)enumDataFromLocalDB:(UIManagedDocument*)document {
     dispatch_queue_t aq = dispatch_queue_create("load_data", NULL);
@@ -74,6 +79,14 @@
     }
 
     return self;
+}
+
+- (BOOL)hasLogin {
+    return self.current_user != nil;
+}
+
+- (LoginToken*)queryCurrentUser {
+    return [CurrentToken enumCurrentLoginUserInContext:_doc.managedObjectContext];
 }
 
 #pragma mark -- weibo call back

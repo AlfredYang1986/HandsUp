@@ -7,7 +7,7 @@
 //
 
 #import "Profile.h"
-//#import "NSManagedObject.h"
+#import "LoginToken.h"
 
 
 @implementation Profile
