@@ -19,6 +19,8 @@
 @synthesize funcBtn = _funcBtn;
 @synthesize plusBtn = _plusBtn;
 
+@synthesize delegate = _delegate;
+
 + (CGFloat)perferredHeight {
     return 115;
 }
@@ -41,7 +43,19 @@
     _plusBtn.layer.cornerRadius = 25.f;
     _plusBtn.clipsToBounds = YES;
     
+    [_plusBtn addTarget:self action:@selector(plusBtnTouchUp) forControlEvents:UIControlEventTouchUpInside];
+    
     NSString* funcPath =[resourceBundle pathForResource:@"Setting" ofType:@"png"];
     [_funcBtn setBackgroundImage:[UIImage imageNamed:funcPath] forState:UIControlStateNormal];
+
+    [_funcBtn addTarget:self action:@selector(settingBtnTouchUp) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)plusBtnTouchUp {
+    [_delegate plusBtnSelected];
+}
+
+- (void)settingBtnTouchUp {
+    [_delegate settingBtnSelected];
 }
 @end

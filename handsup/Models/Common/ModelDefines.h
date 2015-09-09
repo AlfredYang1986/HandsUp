@@ -16,4 +16,4 @@
 //#define AUTH_WITH_PHONE                     @"authWithPhone"
 
 #pragma mark -- database
-//#define LOCALDB_LOGIN                       @"loginData.sqlite"
+#define LOCALDB_LOGIN                       @"loginData.sqlite"

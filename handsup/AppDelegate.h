@@ -13,6 +13,8 @@
 @class CatchUpController;
 @class InfoStationController;
 
+@class LoginModel;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) MainViewController* mainController;
@@ -23,6 +25,8 @@
  * for notification
  */
 @property (strong, nonatomic) NSString *apns_token;
+
+@property (strong, nonatomic) LoginModel* lm;
 
 @property (strong, nonatomic) UIWindow *window;
 @end

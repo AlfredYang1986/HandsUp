@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol HandsUpTitleViewProtocol <NSObject>
+
+- (void)settingBtnSelected;
+- (void)plusBtnSelected;
+@end
+
 @interface HandsUpTitleView : UIView
+
+@property (nonatomic, weak) id<HandsUpTitleViewProtocol> delegate;
 
 + (CGFloat)perferredHeight;
 @end

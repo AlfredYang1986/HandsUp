@@ -14,11 +14,11 @@
 
 #import "HandsUpTitleView.h"
 
-@interface HandsUpController () <UITableViewDataSource, UITableViewDelegate> {
+@interface HandsUpController () <UITableViewDataSource, UITableViewDelegate, HandsUpTitleViewProtocol> {
 
 }
 
-@property (strong, nonatomic, readonly) UIView *titleContainer;
+@property (strong, nonatomic, readonly) HandsUpTitleView *titleContainer;
 @property (strong, nonatomic, readonly) UITableView* queryView;
 @property (strong, nonatomic, readonly) UIButton* refreshBtn;
 @end
@@ -45,6 +45,7 @@
      */
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HandsUpTitleView" owner:self options:nil];
     _titleContainer = [nib objectAtIndex:0];
+    _titleContainer.delegate = self;
   
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     _titleContainer.frame = CGRectMake(0, 20, width, [HandsUpTitleView perferredHeight]);
@@ -212,5 +213,14 @@
     cell.textLabel.text = @"alfred";
     
     return cell;
+}
+
+#pragma mark -- handsup title view delegate
+- (void)settingBtnSelected {
+    
+}
+
+- (void)plusBtnSelected {
+    [self performSegueWithIdentifier:@"HandsUpCreate" sender:nil];
 }
 @end

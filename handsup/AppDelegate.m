@@ -13,6 +13,8 @@
 #import "HandsUpController.h"
 #import "CatchUpController.h"
 
+#import "LoginModel.h"
+
 @interface AppDelegate ()
 @end
 
@@ -25,8 +27,12 @@
 
 @synthesize apns_token = _apns_token;
 
+@synthesize lm = _lm;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   
+    _lm = [[LoginModel alloc]initWithAppDelegate:self];
     
     /**
      * Notification
@@ -109,5 +115,15 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     NSLog(@"didReceiveRemoteNotification : %@", userInfo);
     completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"url is : %@", url);
+    NSLog(@"source Application : %@", sourceApplication);
+    return [WeiboSDK handleOpenURL:url delegate:_lm];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [WeiboSDK handleOpenURL:url delegate:_lm];
 }
 @end
