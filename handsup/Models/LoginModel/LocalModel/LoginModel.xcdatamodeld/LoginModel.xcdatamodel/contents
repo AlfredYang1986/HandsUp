@@ -11,8 +11,6 @@
     </entity>
     <entity name="LoginToken" representedClassName="LoginToken" syncable="YES">
         <attribute name="auth_token" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="screen_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="screen_photo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="connectWith" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SNSConnection" inverseName="who" inverseEntity="SNSConnection" syncable="YES"/>
         <relationship name="current" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentToken" inverseName="who" inverseEntity="CurrentToken" syncable="YES"/>
@@ -22,23 +20,23 @@
     <entity name="Profile" representedClassName="Profile" syncable="YES">
         <attribute name="decipline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="screen_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="screen_photo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="years" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="who" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginToken" inverseName="profile" inverseEntity="LoginToken" syncable="YES"/>
     </entity>
     <entity name="SNSConnection" representedClassName="SNSConnection" syncable="YES">
-        <attribute name="providor_auth_token" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="providor_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="providor_open_id" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="providor_refresh_token" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="providor_screen_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="providor_screen_photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provider_auth_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provider_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provider_open_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provider_refresh_token" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="who" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginToken" inverseName="connectWith" inverseEntity="LoginToken" syncable="YES"/>
     </entity>
     <elements>
         <element name="Course" positionX="-29" positionY="281" width="128" height="103"/>
         <element name="CurrentToken" positionX="-531" positionY="63" width="128" height="58"/>
-        <element name="LoginToken" positionX="-288" positionY="38" width="128" height="163"/>
-        <element name="Profile" positionX="-279" positionY="288" width="128" height="103"/>
-        <element name="SNSConnection" positionX="-38" positionY="-9" width="128" height="148"/>
+        <element name="LoginToken" positionX="-288" positionY="38" width="128" height="133"/>
+        <element name="Profile" positionX="-279" positionY="288" width="128" height="133"/>
+        <element name="SNSConnection" positionX="-38" positionY="-9" width="128" height="118"/>
     </elements>
 </model>

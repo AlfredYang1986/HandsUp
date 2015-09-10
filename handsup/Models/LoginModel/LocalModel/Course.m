@@ -2,7 +2,7 @@
 //  Course.m
 //  
 //
-//  Created by Alfred Yang on 9/09/2015.
+//  Created by Alfred Yang on 10/09/2015.
 //
 //
 
@@ -12,9 +12,9 @@
 
 @implementation Course
 
-@dynamic course_name;
-@dynamic course_id;
 @dynamic course_grade;
+@dynamic course_id;
+@dynamic course_name;
 @dynamic who;
 
 @end

@@ -36,7 +36,7 @@
     NSString* filepath = [resourceBundle pathForResource:@"weibo" ofType:@"png"];
     [_weiboBtn setBackgroundImage:[UIImage imageNamed:filepath] forState:UIControlStateNormal];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLogedIn:) name:@"login success" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLogedIn:) name:@"SNS login success" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {

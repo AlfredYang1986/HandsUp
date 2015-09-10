@@ -2,7 +2,7 @@
 //  SNSConnection.m
 //  
 //
-//  Created by Alfred Yang on 9/09/2015.
+//  Created by Alfred Yang on 10/09/2015.
 //
 //
 
@@ -12,12 +12,10 @@
 
 @implementation SNSConnection
 
-@dynamic providor_screen_name;
-@dynamic providor_screen_photo;
-@dynamic providor_name;
-@dynamic providor_open_id;
-@dynamic providor_auth_token;
-@dynamic providor_refresh_token;
+@dynamic provider_auth_token;
+@dynamic provider_name;
+@dynamic provider_open_id;
+@dynamic provider_refresh_token;
 @dynamic who;
 
 @end

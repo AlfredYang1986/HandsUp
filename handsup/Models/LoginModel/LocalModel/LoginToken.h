@@ -2,7 +2,7 @@
 //  LoginToken.h
 //  
 //
-//  Created by Alfred Yang on 9/09/2015.
+//  Created by Alfred Yang on 10/09/2015.
 //
 //
 
@@ -13,10 +13,8 @@
 
 @interface LoginToken : NSManagedObject
 
-@property (nonatomic, retain) NSString * screen_name;
-@property (nonatomic, retain) NSString * screen_photo;
-@property (nonatomic, retain) NSString * user_id;
 @property (nonatomic, retain) NSString * auth_token;
+@property (nonatomic, retain) NSString * user_id;
 @property (nonatomic, retain) NSSet *connectWith;
 @property (nonatomic, retain) CurrentToken *current;
 @property (nonatomic, retain) Profile *profile;

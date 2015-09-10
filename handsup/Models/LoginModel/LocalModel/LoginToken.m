@@ -2,7 +2,7 @@
 //  LoginToken.m
 //  
 //
-//  Created by Alfred Yang on 9/09/2015.
+//  Created by Alfred Yang on 10/09/2015.
 //
 //
 
@@ -15,10 +15,8 @@
 
 @implementation LoginToken
 
-@dynamic screen_name;
-@dynamic screen_photo;
-@dynamic user_id;
 @dynamic auth_token;
+@dynamic user_id;
 @dynamic connectWith;
 @dynamic current;
 @dynamic profile;

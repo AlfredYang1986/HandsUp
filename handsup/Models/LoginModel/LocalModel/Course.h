@@ -2,7 +2,7 @@
 //  Course.h
 //  
 //
-//  Created by Alfred Yang on 9/09/2015.
+//  Created by Alfred Yang on 10/09/2015.
 //
 //
 
@@ -13,9 +13,9 @@
 
 @interface Course : NSManagedObject
 
-@property (nonatomic, retain) NSString * course_name;
-@property (nonatomic, retain) NSString * course_id;
 @property (nonatomic, retain) NSNumber * course_grade;
+@property (nonatomic, retain) NSString * course_id;
+@property (nonatomic, retain) NSString * course_name;
 @property (nonatomic, retain) LoginToken *who;
 
 @end
