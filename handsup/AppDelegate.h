@@ -14,6 +14,7 @@
 @class InfoStationController;
 
 @class LoginModel;
+@class HandsUpModel;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -27,6 +28,7 @@
 @property (strong, nonatomic) NSString *apns_token;
 
 @property (strong, nonatomic) LoginModel* lm;
+@property (strong, nonatomic) HandsUpModel* hm;
 
 @property (strong, nonatomic) UIWindow *window;
 @end

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol HandsUpCreateProtocol <NSObject>
+
+- (void)createHandsUpEventResult:(BOOL)success;
+@end
+
 @interface HandsUpCreateController : UIViewController
 
+@property (nonatomic, weak) id<HandsUpCreateProtocol> delegate;
 @end

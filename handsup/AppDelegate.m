@@ -14,6 +14,7 @@
 #import "CatchUpController.h"
 
 #import "LoginModel.h"
+#import "HandsUpModel.h"
 
 @interface AppDelegate ()
 @end
@@ -28,11 +29,13 @@
 @synthesize apns_token = _apns_token;
 
 @synthesize lm = _lm;
+@synthesize hm = _hm;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
    
     _lm = [[LoginModel alloc]initWithAppDelegate:self];
+    _hm = [[HandsUpModel alloc]initWithAppDelegate:self];
     
     /**
      * Notification
@@ -72,6 +75,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [_lm.doc.managedObjectContext save:nil];
+    [_hm.doc.managedObjectContext save:nil];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -85,6 +90,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
+    [_lm.doc.managedObjectContext save:nil];
+    [_hm.doc.managedObjectContext save:nil];
 }
 
 #pragma mark -- notification callback

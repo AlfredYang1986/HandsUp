@@ -15,9 +15,13 @@
 #import "HandsUpTitleView.h"
 #import "AppDelegate.h"
 #import "LoginModel.h"
+#import "handsUpModel.h"
 #import "LoginController.h"
 
-@interface HandsUpController () <UITableViewDataSource, UITableViewDelegate, HandsUpTitleViewProtocol> {
+#import "HandsUpEvent.h"
+#import "HandsUpCreateController.h"
+
+@interface HandsUpController () <UITableViewDataSource, UITableViewDelegate, HandsUpTitleViewProtocol, HandsUpCreateProtocol> {
 
 }
 
@@ -29,6 +33,9 @@
 @implementation HandsUpController {
     UIPanGestureRecognizer* pan;
     CGPoint ori;
+    
+    NSArray* myEvents;
+    NSArray* queryEvents;
 }
 
 @synthesize titleContainer = _titleContainer;
@@ -79,6 +86,16 @@
     [self.view addSubview:_refreshBtn];
     
     [self.view addGestureRecognizer:pan];
+    
+    myEvents = [app.hm enumMyEventsLocalWithUserID:[app.lm getCurrentUserID]];
+    queryEvents = [app.hm enumOtherEventsLocalWithUserID:[app.lm getCurrentUserID]];
+    
+    [app.hm queryHandsUpEventAsyncWithUserID:[app.lm getCurrentUserID] andAuthToken:[app.lm getCurrentAuthToken] AndBlock:^(BOOL success, NSArray *result, NSString *error) {
+        AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        myEvents = [app.hm enumMyEventsLocalWithUserID:[app.lm getCurrentUserID]];
+        queryEvents = [app.hm enumOtherEventsLocalWithUserID:[app.lm getCurrentUserID]];
+        [_queryView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,13 +133,15 @@
     }
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString:@"Info"]) {
-//    
-//    } else if ([segue.identifier isEqualToString:@"CatchUp"]) {
-//        
-//    }
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Info"]) {
+    
+    } else if ([segue.identifier isEqualToString:@"CatchUp"]) {
+        
+    } else if ([segue.identifier isEqualToString:@"HandsUpCreate"]) {
+        ((HandsUpCreateController*)segue.destinationViewController).delegate = self;
+    }
+}
 //
 - (IBAction)rigthBtnSelected {
     [self performSegueWithIdentifier:@"Info" sender:nil];
@@ -203,7 +222,11 @@
 
 #pragma mark -- table view datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;  // for test
+    if (section == 0) {
+        return myEvents.count;
+    } else {
+        return queryEvents.count;
+    }
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -212,8 +235,16 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"default"];
     }
-    
-    cell.textLabel.text = @"alfred";
+   
+   
+    HandsUpEvent* tmp = nil;
+    if (indexPath.section == 0) {
+        tmp = [myEvents objectAtIndex:indexPath.row];
+    } else {
+        tmp = [queryEvents objectAtIndex:indexPath.row];
+    }
+
+    cell.textLabel.text = tmp.title;
     
     return cell;
 }
@@ -236,5 +267,15 @@
         }];
     }
     
+}
+
+#pragma mark -- create handsup protocol
+- (void)createHandsUpEventResult:(BOOL)success {
+    if (success) {
+        AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        myEvents = [app.hm enumMyEventsLocalWithUserID:[app.lm getCurrentUserID]];
+        queryEvents = [app.hm enumOtherEventsLocalWithUserID:[app.lm getCurrentUserID]];
+        [_queryView reloadData];
+    }
 }
 @end

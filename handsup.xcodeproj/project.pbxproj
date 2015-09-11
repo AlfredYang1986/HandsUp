@@ -39,6 +39,11 @@
 		EEAD45A41B9D4B9F000E5EE0 /* HandsUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45A31B9D4B9F000E5EE0 /* HandsUpSegue.m */; };
 		EEAD45AD1B9D5F6B000E5EE0 /* CatchUpSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */; };
 		EEAD45B31B9D72B1000E5EE0 /* InfoSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */; };
+		EEB667EE1BA273E700C37B29 /* HandsUpModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEB667EC1BA273E700C37B29 /* HandsUpModel.xcdatamodeld */; };
+		EEB667F11BA2754E00C37B29 /* HandsUpOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB667F01BA2754E00C37B29 /* HandsUpOwner.m */; };
+		EEB667F41BA2754F00C37B29 /* HandsUpEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB667F31BA2754F00C37B29 /* HandsUpEvent.m */; };
+		EEB667F71BA2766200C37B29 /* HandsUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB667F61BA2766200C37B29 /* HandsUpModel.m */; };
+		EEB667FA1BA278C700C37B29 /* HandsUpOwner+ContextOpt.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB667F91BA278C700C37B29 /* HandsUpOwner+ContextOpt.m */; };
 		EEBF1DDE1B9EA98E00E3951C /* HandsUpBoundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EEBF1DDD1B9EA98D00E3951C /* HandsUpBoundle.bundle */; };
 		EEBF1DE21B9EBB4B00E3951C /* HandsUpTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBF1DE11B9EBB4B00E3951C /* HandsUpTitleView.m */; };
 		EEBF1DE41B9EBB5A00E3951C /* HandsUpTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBF1DE31B9EBB5A00E3951C /* HandsUpTitleView.xib */; };
@@ -149,6 +154,15 @@
 		EEAD45AC1B9D5F6B000E5EE0 /* CatchUpSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpSegue.m; sourceTree = "<group>"; };
 		EEAD45B11B9D72B1000E5EE0 /* InfoSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoSegue.h; sourceTree = "<group>"; };
 		EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoSegue.m; sourceTree = "<group>"; };
+		EEB667ED1BA273E700C37B29 /* HandsUpModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HandsUpModel.xcdatamodel; sourceTree = "<group>"; };
+		EEB667EF1BA2754E00C37B29 /* HandsUpOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpOwner.h; sourceTree = "<group>"; };
+		EEB667F01BA2754E00C37B29 /* HandsUpOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpOwner.m; sourceTree = "<group>"; };
+		EEB667F21BA2754F00C37B29 /* HandsUpEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpEvent.h; sourceTree = "<group>"; };
+		EEB667F31BA2754F00C37B29 /* HandsUpEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpEvent.m; sourceTree = "<group>"; };
+		EEB667F51BA2766200C37B29 /* HandsUpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpModel.h; sourceTree = "<group>"; };
+		EEB667F61BA2766200C37B29 /* HandsUpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpModel.m; sourceTree = "<group>"; };
+		EEB667F81BA278C700C37B29 /* HandsUpOwner+ContextOpt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HandsUpOwner+ContextOpt.h"; sourceTree = "<group>"; };
+		EEB667F91BA278C700C37B29 /* HandsUpOwner+ContextOpt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HandsUpOwner+ContextOpt.m"; sourceTree = "<group>"; };
 		EEBF1DDD1B9EA98D00E3951C /* HandsUpBoundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HandsUpBoundle.bundle; sourceTree = "<group>"; };
 		EEBF1DE01B9EBB4B00E3951C /* HandsUpTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandsUpTitleView.h; sourceTree = "<group>"; };
 		EEBF1DE11B9EBB4B00E3951C /* HandsUpTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandsUpTitleView.m; sourceTree = "<group>"; };
@@ -361,6 +375,7 @@
 		EEAD45691B9D47F0000E5EE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EEB667EA1BA2736200C37B29 /* HandsUpModel */,
 				EEDC04771B9FEE5800600366 /* LoginModel */,
 				EEAD456A1B9D47F0000E5EE0 /* Common */,
 				EEAD456C1B9D47F0000E5EE0 /* Reachability */,
@@ -463,6 +478,30 @@
 				EEAD45B21B9D72B1000E5EE0 /* InfoSegue.m */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		EEB667EA1BA2736200C37B29 /* HandsUpModel */ = {
+			isa = PBXGroup;
+			children = (
+				EEB667EB1BA273A500C37B29 /* LocalModel */,
+				EEB667F51BA2766200C37B29 /* HandsUpModel.h */,
+				EEB667F61BA2766200C37B29 /* HandsUpModel.m */,
+			);
+			path = HandsUpModel;
+			sourceTree = "<group>";
+		};
+		EEB667EB1BA273A500C37B29 /* LocalModel */ = {
+			isa = PBXGroup;
+			children = (
+				EEB667F21BA2754F00C37B29 /* HandsUpEvent.h */,
+				EEB667F31BA2754F00C37B29 /* HandsUpEvent.m */,
+				EEB667EF1BA2754E00C37B29 /* HandsUpOwner.h */,
+				EEB667F01BA2754E00C37B29 /* HandsUpOwner.m */,
+				EEB667EC1BA273E700C37B29 /* HandsUpModel.xcdatamodeld */,
+				EEB667F81BA278C700C37B29 /* HandsUpOwner+ContextOpt.h */,
+				EEB667F91BA278C700C37B29 /* HandsUpOwner+ContextOpt.m */,
+			);
+			path = LocalModel;
 			sourceTree = "<group>";
 		};
 		EEBF1DDF1B9EBB3000E3951C /* HandsUpTitleView */ = {
@@ -734,16 +773,19 @@
 				EEDC04861B9FF21100600366 /* LoginToken.m in Sources */,
 				EEDC04701B9FE34200600366 /* HandsUpCreateController.m in Sources */,
 				EEBF1DFC1B9F14D000E3951C /* InfoStationView.m in Sources */,
+				EEB667F41BA2754F00C37B29 /* HandsUpEvent.m in Sources */,
 				EEBF1DF81B9F149D00E3951C /* InfoStationController.m in Sources */,
 				EEBF1E011B9F162800E3951C /* InfoStationMySchool.m in Sources */,
 				EEDC04741B9FEBA400600366 /* LoginController.m in Sources */,
 				EEBF1E041B9F171D00E3951C /* InfoStationSearchSchool.m in Sources */,
 				EEAD45A01B9D4807000E5EE0 /* SGSheetMenu.m in Sources */,
+				EEB667EE1BA273E700C37B29 /* HandsUpModel.xcdatamodeld in Sources */,
 				EEAD45631B9D47E5000E5EE0 /* INTUInterpolationFunctions.m in Sources */,
 				EEAD45731B9D47F0000E5EE0 /* TmpFileStorageModel.m in Sources */,
 				EE9F5B8C1B9D38F600504355 /* AppDelegate.m in Sources */,
 				EEDC04B81BA0062600600366 /* CurrentToken+ContextOpt.m in Sources */,
 				EEAD459E1B9D4807000E5EE0 /* SGBaseMenu.m in Sources */,
+				EEB667FA1BA278C700C37B29 /* HandsUpOwner+ContextOpt.m in Sources */,
 				EEBF1DF61B9F149D00E3951C /* CatchUpController.m in Sources */,
 				EEAD45641B9D47E5000E5EE0 /* INTUSpringSolver.c in Sources */,
 				EEAD459D1B9D4807000E5EE0 /* SGAlertMenu.m in Sources */,
@@ -762,11 +804,13 @@
 				EEDC048A1B9FF21100600366 /* CurrentToken.m in Sources */,
 				EEAD45A41B9D4B9F000E5EE0 /* HandsUpSegue.m in Sources */,
 				EEAD45721B9D47F0000E5EE0 /* Reachability.m in Sources */,
+				EEB667F71BA2766200C37B29 /* HandsUpModel.m in Sources */,
 				EEDC04891B9FF21100600366 /* SNSConnection.m in Sources */,
 				EEBF1DE21B9EBB4B00E3951C /* HandsUpTitleView.m in Sources */,
 				EEDC048F1B9FF83200600366 /* LoginModel.m in Sources */,
 				EEAD45AD1B9D5F6B000E5EE0 /* CatchUpSegue.m in Sources */,
 				EE9F5B891B9D38F600504355 /* main.m in Sources */,
+				EEB667F11BA2754E00C37B29 /* HandsUpOwner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1053,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		EEB667EC1BA273E700C37B29 /* HandsUpModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEB667ED1BA273E700C37B29 /* HandsUpModel.xcdatamodel */,
+			);
+			currentVersion = EEB667ED1BA273E700C37B29 /* HandsUpModel.xcdatamodel */;
+			path = HandsUpModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		EEDC04791B9FEE8400600366 /* LoginModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

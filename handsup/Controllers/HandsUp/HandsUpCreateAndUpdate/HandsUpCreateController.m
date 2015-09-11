@@ -7,6 +7,10 @@
 //
 
 #import "HandsUpCreateController.h"
+#import "AppDelegate.h"
+#import "HandsUpModel.h"
+#import "LoginModel.h"
+#import "LoginToken.h"
 
 @interface HandsUpCreateController ()
 @property (weak, nonatomic) IBOutlet UIDatePicker *dataPick;
@@ -18,6 +22,7 @@
 
 @synthesize dataPick = _dataPick;
 @synthesize titleField = _titleField;
+@synthesize delegate = _delegate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +49,20 @@
 }
 
 - (void)doneBtnSelected {
-
+    NSNumber* date = [NSNumber numberWithLongLong:[_dataPick.date timeIntervalSince1970] * 1000];
+    NSString* title = _titleField.text;
+    
+    if (title != nil && title.length > 0) {
+        AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        NSMutableDictionary* dic = [[NSMutableDictionary alloc]init];
+        [dic setObject:date forKey:@"date"];
+        [dic setObject:title forKey:@"title"];
+        [_delegate createHandsUpEventResult:[app.hm user:[app.lm getCurrentUserID] withToken:[app.lm getCurrentAuthToken] postHandsUpEvent:[dic copy]]];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        UIAlertView* view = [[UIAlertView alloc]initWithTitle:@"error" message:@"title cannot be empty" delegate:nil cancelButtonTitle:@"I know" otherButtonTitles:nil];
+        [view show];
+    }
 }
 
 /*

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2BE53FBB-1AC3-4F34-B6AD-B11555918920</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>handsup</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5B2C5DD991C5F5F08CB554017B9D978BEC869906</key>
 		<string>https://github.com/AlfredYang1986/HandsUp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>handsup.xcodeproj/project.xcworkspace</string>
+	<string>handsup.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5B2C5DD991C5F5F08CB554017B9D978BEC869906</key>
