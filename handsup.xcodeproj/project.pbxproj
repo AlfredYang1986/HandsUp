@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE90F6A31BA2D3DE002C93E3 /* CatchUpModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE90F6A11BA2D3DE002C93E3 /* CatchUpModel.xcdatamodeld */; };
+		EE90F6A81BA2D844002C93E3 /* CatchUpEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90F6A51BA2D844002C93E3 /* CatchUpEvent.m */; };
+		EE90F6A91BA2D844002C93E3 /* CatchUpOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90F6A71BA2D844002C93E3 /* CatchUpOwner.m */; };
+		EE90F6AC1BA2D952002C93E3 /* CatchUpOwner+ContextOpt.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90F6AB1BA2D952002C93E3 /* CatchUpOwner+ContextOpt.m */; };
+		EE90F6AF1BA2DD1E002C93E3 /* CatchUpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE90F6AE1BA2DD1E002C93E3 /* CatchUpModel.m */; };
 		EE9F5B891B9D38F600504355 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F5B881B9D38F600504355 /* main.m */; };
 		EE9F5B8C1B9D38F600504355 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F5B8B1B9D38F600504355 /* AppDelegate.m */; };
 		EE9F5B921B9D38F600504355 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9F5B911B9D38F600504355 /* ViewController.m */; };
@@ -94,6 +99,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE90F6A21BA2D3DE002C93E3 /* CatchUpModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CatchUpModel.xcdatamodel; sourceTree = "<group>"; };
+		EE90F6A41BA2D844002C93E3 /* CatchUpEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchUpEvent.h; sourceTree = "<group>"; };
+		EE90F6A51BA2D844002C93E3 /* CatchUpEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpEvent.m; sourceTree = "<group>"; };
+		EE90F6A61BA2D844002C93E3 /* CatchUpOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchUpOwner.h; sourceTree = "<group>"; };
+		EE90F6A71BA2D844002C93E3 /* CatchUpOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpOwner.m; sourceTree = "<group>"; };
+		EE90F6AA1BA2D952002C93E3 /* CatchUpOwner+ContextOpt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CatchUpOwner+ContextOpt.h"; sourceTree = "<group>"; };
+		EE90F6AB1BA2D952002C93E3 /* CatchUpOwner+ContextOpt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CatchUpOwner+ContextOpt.m"; sourceTree = "<group>"; };
+		EE90F6AD1BA2DD1E002C93E3 /* CatchUpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchUpModel.h; sourceTree = "<group>"; };
+		EE90F6AE1BA2DD1E002C93E3 /* CatchUpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchUpModel.m; sourceTree = "<group>"; };
 		EE9F5B831B9D38F600504355 /* handsup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handsup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9F5B871B9D38F600504355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE9F5B881B9D38F600504355 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -260,6 +274,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE90F69F1BA2D3A5002C93E3 /* CatchUpModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE90F6A01BA2D3A5002C93E3 /* LocalModel */,
+				EE90F6AD1BA2DD1E002C93E3 /* CatchUpModel.h */,
+				EE90F6AE1BA2DD1E002C93E3 /* CatchUpModel.m */,
+			);
+			path = CatchUpModel;
+			sourceTree = "<group>";
+		};
+		EE90F6A01BA2D3A5002C93E3 /* LocalModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE90F6A41BA2D844002C93E3 /* CatchUpEvent.h */,
+				EE90F6A51BA2D844002C93E3 /* CatchUpEvent.m */,
+				EE90F6A61BA2D844002C93E3 /* CatchUpOwner.h */,
+				EE90F6A71BA2D844002C93E3 /* CatchUpOwner.m */,
+				EE90F6A11BA2D3DE002C93E3 /* CatchUpModel.xcdatamodeld */,
+				EE90F6AA1BA2D952002C93E3 /* CatchUpOwner+ContextOpt.h */,
+				EE90F6AB1BA2D952002C93E3 /* CatchUpOwner+ContextOpt.m */,
+			);
+			path = LocalModel;
+			sourceTree = "<group>";
+		};
 		EE9F5B7A1B9D38F600504355 = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +413,7 @@
 		EEAD45691B9D47F0000E5EE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE90F69F1BA2D3A5002C93E3 /* CatchUpModel */,
 				EEB667EA1BA2736200C37B29 /* HandsUpModel */,
 				EEDC04771B9FEE5800600366 /* LoginModel */,
 				EEAD456A1B9D47F0000E5EE0 /* Common */,
@@ -776,6 +815,7 @@
 				EEB667F41BA2754F00C37B29 /* HandsUpEvent.m in Sources */,
 				EEBF1DF81B9F149D00E3951C /* InfoStationController.m in Sources */,
 				EEBF1E011B9F162800E3951C /* InfoStationMySchool.m in Sources */,
+				EE90F6A81BA2D844002C93E3 /* CatchUpEvent.m in Sources */,
 				EEDC04741B9FEBA400600366 /* LoginController.m in Sources */,
 				EEBF1E041B9F171D00E3951C /* InfoStationSearchSchool.m in Sources */,
 				EEAD45A01B9D4807000E5EE0 /* SGSheetMenu.m in Sources */,
@@ -783,11 +823,14 @@
 				EEAD45631B9D47E5000E5EE0 /* INTUInterpolationFunctions.m in Sources */,
 				EEAD45731B9D47F0000E5EE0 /* TmpFileStorageModel.m in Sources */,
 				EE9F5B8C1B9D38F600504355 /* AppDelegate.m in Sources */,
+				EE90F6AC1BA2D952002C93E3 /* CatchUpOwner+ContextOpt.m in Sources */,
 				EEDC04B81BA0062600600366 /* CurrentToken+ContextOpt.m in Sources */,
 				EEAD459E1B9D4807000E5EE0 /* SGBaseMenu.m in Sources */,
 				EEB667FA1BA278C700C37B29 /* HandsUpOwner+ContextOpt.m in Sources */,
+				EE90F6A31BA2D3DE002C93E3 /* CatchUpModel.xcdatamodeld in Sources */,
 				EEBF1DF61B9F149D00E3951C /* CatchUpController.m in Sources */,
 				EEAD45641B9D47E5000E5EE0 /* INTUSpringSolver.c in Sources */,
+				EE90F6A91BA2D844002C93E3 /* CatchUpOwner.m in Sources */,
 				EEAD459D1B9D4807000E5EE0 /* SGAlertMenu.m in Sources */,
 				EEAD459C1B9D4807000E5EE0 /* SGActionView.m in Sources */,
 				EEC9B4CE1B9E8489006806ED /* MainViewController.m in Sources */,
@@ -798,6 +841,7 @@
 				EEDC047B1B9FEE8400600366 /* LoginModel.xcdatamodeld in Sources */,
 				EEAD459F1B9D4807000E5EE0 /* SGGridMenu.m in Sources */,
 				EEAD45621B9D47E5000E5EE0 /* INTUEasingFunctions.m in Sources */,
+				EE90F6AF1BA2DD1E002C93E3 /* CatchUpModel.m in Sources */,
 				EEAD45951B9D4807000E5EE0 /* BWStatusBarOverlay.m in Sources */,
 				EEAD45B31B9D72B1000E5EE0 /* InfoSegue.m in Sources */,
 				EEDC04881B9FF21100600366 /* Course.m in Sources */,
@@ -1053,6 +1097,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		EE90F6A11BA2D3DE002C93E3 /* CatchUpModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE90F6A21BA2D3DE002C93E3 /* CatchUpModel.xcdatamodel */,
+			);
+			currentVersion = EE90F6A21BA2D3DE002C93E3 /* CatchUpModel.xcdatamodel */;
+			path = CatchUpModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		EEB667EC1BA273E700C37B29 /* HandsUpModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

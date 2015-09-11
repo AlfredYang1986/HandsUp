@@ -11,6 +11,8 @@
 #import "HandsUpController.h"
 #import "CatchUpView.h"
 
+#import "LoginModel.h"
+
 @interface CatchUpController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic, readonly) CatchUpView* mainView;
