@@ -15,6 +15,7 @@
 
 #import "LoginModel.h"
 #import "HandsUpModel.h"
+#import "CatchUpModel.h"
 
 @interface AppDelegate ()
 @end
@@ -30,12 +31,14 @@
 
 @synthesize lm = _lm;
 @synthesize hm = _hm;
+@synthesize cm = _cm;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
    
     _lm = [[LoginModel alloc]initWithAppDelegate:self];
     _hm = [[HandsUpModel alloc]initWithAppDelegate:self];
+    _cm = [[CatchUpModel alloc]initWithAppDelegate:self];
     
     /**
      * Notification

@@ -86,7 +86,24 @@
     [self.view addSubview:_refreshBtn];
     
     [self.view addGestureRecognizer:pan];
+   
+    if ([app.lm hasLogin]) {
+        myEvents = [app.hm enumMyEventsLocalWithUserID:[app.lm getCurrentUserID]];
+        queryEvents = [app.hm enumOtherEventsLocalWithUserID:[app.lm getCurrentUserID]];
+        
+        [app.hm queryHandsUpEventAsyncWithUserID:[app.lm getCurrentUserID] andAuthToken:[app.lm getCurrentAuthToken] AndBlock:^(BOOL success, NSArray *result, NSString *error) {
+            AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+            myEvents = [app.hm enumMyEventsLocalWithUserID:[app.lm getCurrentUserID]];
+            queryEvents = [app.hm enumOtherEventsLocalWithUserID:[app.lm getCurrentUserID]];
+            [_queryView reloadData];
+        }];
+    }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLogedIn:) name:@"SNS login success" object:nil];
+}
+
+- (void)userLogedIn:(NSNotification*)notification {
+    AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
     myEvents = [app.hm enumMyEventsLocalWithUserID:[app.lm getCurrentUserID]];
     queryEvents = [app.hm enumOtherEventsLocalWithUserID:[app.lm getCurrentUserID]];
     
@@ -95,7 +112,12 @@
         myEvents = [app.hm enumMyEventsLocalWithUserID:[app.lm getCurrentUserID]];
         queryEvents = [app.hm enumOtherEventsLocalWithUserID:[app.lm getCurrentUserID]];
         [_queryView reloadData];
-    }];
+    }];   
+}
+
+- (void)dealloc {
+    [self.view removeGestureRecognizer:pan];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,10 +135,6 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
 
-}
-
-- (void)dealloc {
-    [self.view removeGestureRecognizer:pan];
 }
 
 - (void)viewDidLayoutSubviews {

@@ -15,6 +15,7 @@
 
 @class LoginModel;
 @class HandsUpModel;
+@class CatchUpModel;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -29,6 +30,7 @@
 
 @property (strong, nonatomic) LoginModel* lm;
 @property (strong, nonatomic) HandsUpModel* hm;
+@property (strong, nonatomic) CatchUpModel* cm;
 
 @property (strong, nonatomic) UIWindow *window;
 @end

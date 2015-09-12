@@ -7,7 +7,7 @@
 //
 
 #import "CatchUpOwner.h"
-#import "NSManagedObject.h"
+//#import "NSManagedObject.h"
 
 
 @implementation CatchUpOwner

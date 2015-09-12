@@ -12,6 +12,9 @@
 #import "CatchUpView.h"
 
 #import "LoginModel.h"
+#import "CatchUpModel.h"
+
+#import "CatchUpEvent.h"
 
 @interface CatchUpController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -22,6 +25,8 @@
 @implementation CatchUpController {
     UIPanGestureRecognizer* pan;
     CGPoint ori;
+    
+    NSArray* queryData;
 }
 
 @synthesize mainView = _mainView;
@@ -47,10 +52,33 @@
     
     pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePan:)];
     [_mainView addGestureRecognizer:pan];
+   
+    if ([app.lm hasLogin]) {
+        queryData = [app.cm enumAllCatchUpEventWithUserID:[app.lm getCurrentUserID]];
+        
+        [app.cm queryCatchUpEventAsyncWithUserID:[app.lm getCurrentUserID] andAuthToken:[app.lm getCurrentAuthToken] AndBlock:^(BOOL success, NSArray *result, NSString *error) {
+            queryData = [app.cm enumAllCatchUpEventWithUserID:[app.lm getCurrentUserID]];
+            [_queryView reloadData];
+        }];
+    }
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLogedIn:) name:@"SNS login success" object:nil];
+}
+
+- (void)userLogedIn:(NSNotification*)notification {
+    AppDelegate* app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    queryData = [app.cm enumAllCatchUpEventWithUserID:[app.lm getCurrentUserID]];
+        
+    [app.cm queryCatchUpEventAsyncWithUserID:[app.lm getCurrentUserID] andAuthToken:[app.lm getCurrentAuthToken] AndBlock:^(BOOL success, NSArray *result, NSString *error) {
+        queryData = [app.cm enumAllCatchUpEventWithUserID:[app.lm getCurrentUserID]];
+        [_queryView reloadData];
+    }];
 }
 
 - (void)dealloc {
     [_mainView removeGestureRecognizer:pan];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +115,7 @@
 
 #pragma mark -- table view datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return queryData.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,8 +124,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"default"];
     }
-    
-    cell.textLabel.text = @"alfred";
+   
+    CatchUpEvent* event = [queryData objectAtIndex:indexPath.row];
+    cell.textLabel.text = event.title;
     
     return cell;
 }

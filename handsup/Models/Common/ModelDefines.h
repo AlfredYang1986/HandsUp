@@ -21,10 +21,15 @@
 #define PROFILE_UPDATE                      [PROFILE_HOST_DOMAIN stringByAppendingString:@"updateUserProfile"]
 #define PROFILE_QUERY                       [PROFILE_HOST_DOMAIN stringByAppendingString:@"queryUserProfile"]
 
-#define mark -- HANDSUP
+#pragma mark -- HANDSUP
 #define HANDSUP_DOMAIN                      [HOST_DOMAIN stringByAppendingString:@"handsup/"]
 #define HANDSUP_QUERY                       [HANDSUP_DOMAIN stringByAppendingString:@"queryHandsUpEvents"]
 #define HANDSUP_POST                        [HANDSUP_DOMAIN stringByAppendingString:@"postHandsUpEvent"]
+
+#pragma mark -- CATCHUP
+#define CATCHUP_DOMAIN                      [HOST_DOMAIN stringByAppendingString:@"catchup/"]
+#define CATCHUP_QUERY                       [CATCHUP_DOMAIN stringByAppendingString:@"queryCatchUpEvents"]
+#define CATCHUP_CATCH                       [CATCHUP_DOMAIN stringByAppendingString:@"catchUpEvent"]
 
 #pragma mark -- FILE (UPLOAD AND DOWNLOAD)
 #define FILE_HOST_DOMAIN                    [HOST_DOMAIN stringByAppendingString:@"file/"]
@@ -33,3 +38,4 @@
 #pragma mark -- database
 #define LOCALDB_LOGIN                       @"loginData.sqlite"
 #define LOCALDB_HANDSUP                     @"handsup.sqlite"
+#define LOCALDB_CATCHUP                     @"catchup.sqlite"

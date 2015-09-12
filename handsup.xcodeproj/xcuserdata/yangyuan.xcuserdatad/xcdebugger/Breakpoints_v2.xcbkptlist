@@ -153,22 +153,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "handsup/Controllers/HandsUp/HandsUpController.m"
-            timestampString = "463647271.896842"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "handsup/Models/HandsUpModel/LocalModel/HandsUpOwner+ContextOpt.m"
             timestampString = "463646657.779786"
             startingColumnNumber = "9223372036854775807"
@@ -186,12 +170,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "handsup/Controllers/HandsUp/HandsUpController.m"
-            timestampString = "463647271.896842"
+            timestampString = "463725485.993809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "274"
-            endingLineNumber = "274"
-            landmarkName = "-createHandsUpEventResult:"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
+            landmarkName = "-plusBtnSelected"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "handsup/Controllers/CatchUp/CatchUpController.m"
+            timestampString = "463726853.271913"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CatchUpController viewDidLoad]"
+                  moduleName = "handsup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyuan/Desktop/HandsUp/HandsUp2/handsup/Controllers/CatchUp/CatchUpController.m"
+                  timestampString = "463726982.173722"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1630">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__32-[CatchUpController viewDidLoad]_block_invoke"
+                  moduleName = "handsup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangyuan/Desktop/HandsUp/HandsUp2/handsup/Controllers/CatchUp/CatchUpController.m"
+                  timestampString = "463726982.174006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "70">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "handsup/Models/CatchUpModel/CatchUpModel.m"
+            timestampString = "463726919.493754"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-queryCatchUpEventAsyncWithUserID:andAuthToken:AndBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
